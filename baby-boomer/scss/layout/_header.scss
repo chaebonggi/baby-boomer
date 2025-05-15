@@ -38,6 +38,100 @@ html.loaded #header {
         }
     }
 
+    &.open {
+        
+        #gnb {            
+            visibility: visible;
+            transform: translate3d(0px, 0px, 0);
+            z-index: 3;
+            
+            .gnb-list-wrap {
+                transition: all 0.35s ease;
+                opacity: 1;
+            }            
+        }
+        .header-units {
+            li {
+
+                &.header-units-mobile {
+
+                    .svg-icon {
+                        background-color: #222;
+
+                        &.default {
+                            opacity: 0;
+                        }
+
+                        &.close {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .gnb-list {
+            flex-direction: column;
+            margin-top: 7.2rem;
+
+            > li {
+                border-bottom: 1px solid #e5e5e5;
+
+                &::before {
+                    content: none;
+                }    
+            }
+        }
+        .gnb-1depth {
+            display: block;
+            height: auto;
+
+            > a {
+                display: block;
+                padding: 2rem 4rem;
+                color: #222;
+                font-size: 2rem;
+            }
+        }
+        .gnb-2depth {
+            position: static;
+            text-align: left;
+            padding: 0 6rem 2rem;
+            opacity: 1;
+            visibility: visible;
+            box-shadow: none;
+        }
+        .gnb-2depth-list {
+            > li {
+                display: block;            
+
+                > a {
+                    display: block;
+                    padding: 1rem;
+
+                    span {
+                        
+                        &::before {
+                            content: '-';
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 640px) {
+            .gnb-1depth {
+
+                > a {
+                    padding: 1.5rem 2rem;
+                    font-size: 1.8rem;
+                }
+            }
+            .gnb-2depth {
+                padding: 0 3rem 1.5rem;
+            }
+        }
+    }
+
     .header-wrapper {
         height: 10.4rem;
         padding: 0 4rem;
@@ -74,10 +168,15 @@ html.loaded #header {
     }
     .header-units {
         display: flex;
+        position: relative;
 
         > li {
             &:not(:first-child) {
                 margin-left: 1.6rem;
+            }
+            &.header-units-mobile {
+                display: none;
+                z-index: 10;
             }
         }
         button {
@@ -172,29 +271,69 @@ html.loaded #header {
             }
         }
     }
-
-}
-
-
-@media (max-width: 1380px) {
-    #header {
+    @media (max-width: 1380px) {
+         .header-wrapper {
+            padding: 0 2rem;
+        }
         #gnb {
             position: absolute;
             top: 0;
             left: 0;
-            visibility: hidden;
-            box-sizing: border-box;
             width: 100vw;
             background-color: #FFFFFF;
+            box-sizing: border-box;
+            visibility: hidden;
+            transform: translate3d(100vw, 0px, 0);
+            transition: all 0.35s ease;
 
             .gnb-list-wrap {
+                height: 100dvh;
+                overflow-y: scroll;                
                 opacity: 0;
             }
         }
         .header-units {
             li {
                 display: none;
+
+                &.header-units-mobile {
+                    display: block;
+                    margin-left: 0;
+
+                    .svg-icon {
+                        width: 3.4rem;
+                        height: 3.4rem;
+                        transition: all 0.35s ease;
+
+                        &.close {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                        }
+                    }
+
+                    
+                }
             }
         }
+    
     }
+    @media (max-width: 1024px) {
+        .header-logo {
+            width: 30rem;
+        }
+    }
+    @media (max-width: 640px) {
+        .header-wrapper {
+            height: 7.2rem;
+            padding: 0 1rem;
+        } 
+        .header-logo {
+            width: 18rem;
+        }
+    }
+
 }
+
+
