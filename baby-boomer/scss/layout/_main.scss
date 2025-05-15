@@ -296,7 +296,8 @@ html.loaded #main .main-menu-wrap {
             grid-template-columns: 1fr 1fr;
             gap: 5rem 2rem;
             > li {
-
+                transition: all 0.35s ease;
+                
                 > a {
                     display: block;
                     min-height: 35rem;
@@ -321,6 +322,12 @@ html.loaded #main .main-menu-wrap {
                         top: 0;
                         left: 0;
                     }
+                    
+                }
+
+                &:hover {
+                    transform: translateY(-1rem);
+                    transition: all 0.35s ease;
                 }
 
                 &:nth-child(1) {

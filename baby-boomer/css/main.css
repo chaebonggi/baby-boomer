@@ -875,6 +875,9 @@ html.loaded #main .main-menu-wrap {
   grid-template-columns: 1fr 1fr;
   gap: 5rem 2rem;
 }
+#main .main-policy .main-policy-list > li {
+  transition: all 0.35s ease;
+}
 #main .main-policy .main-policy-list > li > a {
   display: block;
   min-height: 35rem;
@@ -897,6 +900,10 @@ html.loaded #main .main-menu-wrap {
   position: absolute;
   top: 0;
   left: 0;
+}
+#main .main-policy .main-policy-list > li:hover {
+  transform: translateY(-1rem);
+  transition: all 0.35s ease;
 }
 #main .main-policy .main-policy-list > li:nth-child(1) .policy-info {
   background-image: url(../images/main/policy_img01.png);
