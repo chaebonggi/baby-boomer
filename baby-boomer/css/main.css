@@ -1485,11 +1485,18 @@ html.loaded #main .main-menu-wrap {
   }
 }
 @media (max-width: 640px) {
+  #footer .footer-logo-list {
+    width: 20rem;
+  }
   #footer .footer-sns {
     display: flex;
     justify-content: center;
   }
+  #footer .footer-sns-list img {
+    width: 2.4rem;
+  }
   #footer .footer-addr {
+    margin-top: 2rem;
     font-size: 1.4rem;
   }
   #footer .copyright {
