@@ -1,0 +1,31 @@
+.svg-icon {
+    display: inline-flex;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #fff;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+
+    &.left {
+        margin-left: 0.5rem;
+    }
+    &.right {
+        margin-right: 0.5rem;
+    }
+    &.ico-home {
+        mask-image: url(../images/icon/ico_home.svg);
+    }
+    &.ico-star {
+        mask-image: url(../images/icon/ico_star.svg);
+    }
+    &.ico-tel {
+        mask-image: url(../images/icon/ico_tel.svg);
+    }
+    &.ico-menu {
+        mask-image: url(../images/icon/ico_menu.svg);
+    }
+    &.ico-close {
+        mask-image: url(../images/icon/ico_close.svg);
+    }
+}
