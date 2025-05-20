@@ -159,6 +159,16 @@
                     flex-direction: column;
                     gap: 2rem;
                 }
+                .info-tit {
+                    display: inline-flex;
+                    gap: 0.5rem;
+                    width: 100%;
+                    font-size: 1.8rem;
+
+                    &::before {
+                        content: '○';
+                    }
+                }
                 .list-type {
                     padding-left: 1rem;
                 }
@@ -180,11 +190,12 @@
             }        
         }
         @media (max-width: 420px) {
-            .site-list-wrap {
+            .site-list-wrap {                
                 gap: 0.5rem;
                 
                 .site-logo {
                     padding: 1rem;
+                    border-radius: 0.5rem;
                     
                     picture {
                         display: flex;
