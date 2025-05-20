@@ -6,8 +6,10 @@
 
 @use "components/icon";
 @use "components/button";
+@use "components/accordion";
+@use "components/tabmenu";
 
 @use "layout/header";
 @use "layout/layout";
-@use "layout/main";
+@use "layout/boomer";
 @use "layout/footer";

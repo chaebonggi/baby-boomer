@@ -314,6 +314,9 @@ html, body {
 .svg-icon.ico-close {
   mask-image: url(../images/icon/ico_close.svg);
 }
+.svg-icon.ico-arrow {
+  mask-image: url(../images/icon/ico_arrow.svg);
+}
 
 .btn {
   display: inline-flex;
@@ -350,7 +353,7 @@ html.loaded #header {
 }
 #header.fixed .header-wrapper {
   background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom-color: #e5e5e5;
   transition: all 0.35s ease;
 }
 #header.fixed .header-logo img.black {
@@ -363,6 +366,21 @@ html.loaded #header {
   color: #222;
 }
 #header.fixed .header-units button .svg-icon {
+  background-color: #222;
+}
+#header.dark .header-wrapper {
+  background-color: #fff;
+}
+#header.dark .header-logo img.black {
+  opacity: 1;
+}
+#header.dark .gnb-1depth > a {
+  color: #222;
+}
+#header.dark .header-units button {
+  color: #222;
+}
+#header.dark .header-units button .svg-icon {
   background-color: #222;
 }
 #header.open #gnb {
@@ -435,6 +453,7 @@ html.loaded #header {
   height: 10.4rem;
   padding: 0 4rem;
   background-color: transparent;
+  border-bottom: 1px solid transparent;
   transition: all 0.35s ease;
 }
 #header .header-inner {
@@ -598,6 +617,18 @@ html.loaded #header {
   #header .header-logo {
     width: 18rem;
   }
+}
+
+.mt20 {
+  margin-top: 2rem;
+}
+
+.mt40 {
+  margin-top: 4rem;
+}
+
+.mt60 {
+  margin-top: 6rem;
 }
 
 .container-lg {

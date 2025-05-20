@@ -1,0 +1,85 @@
+.tab-container {
+    
+
+    .tab-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        border-bottom: 1px solid #e5e5e5;
+
+        &.full {
+            align-items: stretch;            
+            gap: 0;
+
+            li {
+                flex: 1 1 0px;
+            }
+            .btn-tab {
+                justify-content: center;
+                width: 100%;
+                padding: 1.5rem 0;
+                border-radius: 2rem 2rem 0 0;
+            }
+            @media (max-width: 640px) {
+                .btn-tab {
+                    padding: 1rem 0;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        
+
+        li {
+            display: inline-flex;
+            flex-grow: 0;
+        }
+        .btn-tab {
+            display: inline-flex;
+            color: #adadad;
+            font-size: 2rem;
+            cursor: pointer;
+
+            &.active {
+                background-color: #203d87;
+                color: #fff;
+            }
+
+            .tab-ico {
+                display: inline-flex;
+                align-items: center;
+                width: 2.8rem;
+                height: 2.8rem;
+                margin-right: 1rem;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &.menu01 {
+                    background-image: url(../images/main/ico_tab_menu01.png);
+                    background-size: contain;
+                }
+                &.menu02 {
+                    background-image: url(../images/main/ico_tab_menu02.png);
+                    background-size: contain;
+                }
+                @media (max-width: 640px) {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+    }
+
+    .tab-cont-wrap {
+
+    }
+    .tab-cont {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

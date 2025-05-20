@@ -1,0 +1,259 @@
+#boomer {
+    padding-top: 13rem;
+    
+    .boomer-top {
+        .boomer-top-wrap {
+            height: 100%;
+            position: relative;
+        }
+        .boomer-img {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .img-mo {
+                display: none;
+            }
+        }
+        .boomer-tit-wrap {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .boomer-tit {
+            padding: 5rem 4rem;
+
+            .tit {
+                color: #333333;
+                font-size: 3.2rem;
+                font-weight: 900;
+            }
+            .txt {
+                margin-top: 3rem;
+                color: #333333;
+                font-size: 1.8rem;
+                line-height: 1.8;
+                letter-spacing: -0.05rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .boomer-img {
+                .img-pc {
+                    display: none;
+                }
+                .img-mo {
+                    display: block;
+                }
+            }
+        }
+        @media (max-width: 420px) {
+            .boomer-tit {
+                padding: 2rem;
+
+                .tit {
+                    font-size: 2rem;
+                }
+                .txt {
+                    margin-top: 1rem;
+                    font-size: 1.4rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+        
+    }
+
+    .boomer-info {
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            margin-top: 6rem;
+
+            .info-list-item {
+                display: flex;
+
+                .info-cont-img {
+                    border-radius: 2rem;
+                    overflow: hidden;
+                }
+            }
+            .info-tit {
+                flex-shrink: 0;
+                width: 20rem;
+                color: #333333;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            .info-box {
+                width: 100%;
+            }   
+        }        
+        .site-list-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            &.type02 {
+                gap: 2rem 1rem;
+
+                @media (max-width: 640px) {
+                    .site-item {
+                        flex: 1 1 40%;
+                    }
+                }
+                @media (max-width: 420px) {
+                    .site-item {
+                        flex: 100%;
+                    }
+                }
+            }
+            
+            .site-item {
+                flex: 1;
+                
+                .list-type {
+                    padding: 0 0.5rem;
+                    margin-top: 1rem;
+
+                    li {
+                        font-size: 1.6rem;
+                    }
+                }    
+                
+            }
+            .site-logo {
+                display: block;
+                padding: 2rem;
+                border-radius: 2rem;
+                border: 1px solid #dddddd;  
+                
+                picture {
+                    display: flex;
+                    align-items: center;
+                    height: 4.2rem;
+                }
+                img {
+                    height: 100%;
+                    margin: 0 auto;
+                    object-fit: scale-down;
+                }
+            }
+            .site-tit {
+                margin-top: 1rem;
+                color: #333333;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+        }
+        @media (max-width: 768px) {
+            .info-list {
+                gap: 4rem;
+
+                .info-list-item {
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+                .list-type {
+                    padding-left: 1rem;
+                }
+                
+            }        
+        }
+        @media (max-width: 420px) {
+            .site-list-wrap {
+                gap: 0.5rem;
+                
+                .site-logo {
+                    padding: 1rem;
+                    
+                    picture {
+                        display: flex;
+                        align-items: center;
+                        height: 2.5rem;
+                    }
+                    img {
+                        
+                        margin: 0 auto;
+                    }
+                }
+                .site-tit {
+                    margin-top: 0.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }   
+    }
+    .list-type {
+        margin-top: -0.2rem;
+        color: #333333;
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: -0.05rem;
+        line-height: 1.6;
+
+        > li {            
+            position: relative;
+            padding-left: 1rem;
+
+            &::before {
+                content: '';
+                width: 0.3rem;
+                height: 0.3rem;
+                position: absolute;
+                top: 1.2rem;
+                left: 0;
+                background-color: #333333;
+                border-radius: 50%;
+            }
+            li {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .boomer-footer {
+        margin-top: 24rem;
+        background-color: #203d87;
+
+        .boomer-footer-tit {
+            padding: 3rem 0;
+            position: relative;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 500;
+
+            &::before {
+                content: '';
+                width: 26.4rem;
+                height: 15.2rem;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: url(../images/main/boomer_footer.png) no-repeat;
+                background-size: contain;
+            }
+        }
+        @media (max-width: 640px) {
+            margin-top: 6rem;
+
+            .boomer-footer-tit {
+                padding: 1.5rem 0;
+                font-size: 1.2rem;
+
+                &::before {
+                    width: 9rem;
+                    height: 5.2rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 640px) {
+        padding-top: 8rem;
+    }
+}
