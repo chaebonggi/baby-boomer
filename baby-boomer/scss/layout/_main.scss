@@ -2,6 +2,9 @@
     .for-tablet {
         display: none;
     }
+    .for-mo {
+        display: none;
+    }
     .main-view {
         height: 72rem;
         position: relative;
@@ -159,8 +162,11 @@
         }
     }
     @media (max-width: 640px) {
-        .for-mo {
+        .for-tablet-mo {
             display: none;
+        }
+        .for-mo {
+            display: block;
         }
         .main-view {
             height: 26rem;
@@ -867,6 +873,62 @@
                     }
                 }
                 
+            }
+        }
+        .tab-container {
+            width: 100%;
+            .tab-list {
+                gap: 0.5rem;
+                border-bottom: none;
+
+                &:nth-child(2) {
+                    margin-top: 0.5rem;
+                }
+
+                li {
+                    flex: 1;
+                    width: 100%;
+                    background-color: #f0f0f0;
+                    border-radius: 1rem;
+                    overflow: hidden;
+
+                    .btn-tab {
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 5rem;                        
+                        letter-spacing: -0.05rem;
+                        color: #000;
+                        font-size: 1.4rem;
+                        
+                        &.active {
+                            background-color: #f3970f;
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+            .tab-cont-wrap {
+                margin-top: 1rem;
+            }
+            .tab-cont {
+                .tab-box {
+                    padding: 1.5rem 0;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    border-radius: 0.5rem;
+
+                    p {
+                        color: #000;
+                        font-size: 1.4rem;
+                        text-align: center;
+
+                        span {
+                            font-weight: 300;
+                        }
+                    }
+                }
             }
         }
 
