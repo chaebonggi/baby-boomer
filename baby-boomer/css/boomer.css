@@ -1122,6 +1122,18 @@ html.loaded #main .main-menu-wrap {
     padding-left: 1rem;
   }
 }
+@media (max-width: 640px) {
+  #boomer .boomer-info .info-list {
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+  #boomer .boomer-info .info-list .info-list-item {
+    gap: 1rem;
+  }
+  #boomer .boomer-info .info-list .list-type {
+    font-size: 1.6rem;
+  }
+}
 @media (max-width: 420px) {
   #boomer .boomer-info .site-list-wrap {
     gap: 0.5rem;
@@ -1149,6 +1161,33 @@ html.loaded #main .main-menu-wrap {
   font-weight: 400;
   letter-spacing: -0.05rem;
   line-height: 1.6;
+}
+#boomer .list-type.type02 > li {
+  padding-left: 2rem;
+}
+#boomer .list-type.type02 > li::after {
+  content: "①";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#boomer .list-type.type02 > li::before {
+  content: none;
+}
+#boomer .list-type.type02 > li:nth-child(2)::after {
+  content: "②";
+}
+#boomer .list-type.type02 > li:nth-child(3)::after {
+  content: "③";
+}
+#boomer .list-type.type02 > li:nth-child(4)::after {
+  content: "④";
+}
+#boomer .list-type.type02 > li:nth-child(5)::after {
+  content: "⑤";
+}
+#boomer .list-type.type02 > li.list-tip::after {
+  content: "※";
 }
 #boomer .list-type > li {
   position: relative;
