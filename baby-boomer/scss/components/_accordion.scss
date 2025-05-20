@@ -209,8 +209,6 @@
             }            
         }
     }
-    @media (max-width: 640px) {
-    }
 
     &.type02 {
         .accordion-item {
@@ -229,8 +227,15 @@
                     color: #b0b0b0;
                     text-underline-offset: 0.5rem;
                     text-decoration: underline;
-                }                
+                }
+                @media (max-width: 640px) {
+                    right: 1.5rem;
+                    &::before {
+                        font-size: 1.2rem;
+                    }
+                }
             }
+            
             &.open {
                 .accordion-btn {
                     &::before {
@@ -250,7 +255,7 @@
             
             @media (max-width: 640px) {
                 padding: 2rem 1.5rem;        
-                padding-right: 12rem;   
+                padding-right: 6rem;   
             }
         }
         .accordion-cont {

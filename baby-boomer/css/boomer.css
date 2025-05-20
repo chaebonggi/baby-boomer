@@ -548,6 +548,14 @@ html, body {
   text-underline-offset: 0.5rem;
   text-decoration: underline;
 }
+@media (max-width: 640px) {
+  .accordion-container.type02 .accordion-item .accordion-btn {
+    right: 1.5rem;
+  }
+  .accordion-container.type02 .accordion-item .accordion-btn::before {
+    font-size: 1.2rem;
+  }
+}
 .accordion-container.type02 .accordion-item.open .accordion-btn::before {
   content: "닫기 X";
 }
@@ -563,7 +571,7 @@ html, body {
 @media (max-width: 640px) {
   .accordion-container.type02 .accordion-menu {
     padding: 2rem 1.5rem;
-    padding-right: 12rem;
+    padding-right: 6rem;
   }
 }
 .accordion-container.type02 .accordion-cont {
