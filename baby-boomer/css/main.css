@@ -802,7 +802,7 @@ html.loaded #main .main-menu-wrap {
     display: none;
   }
   #main .main-view {
-    height: 28rem;
+    height: 26rem;
   }
   #main .main-view .main-tit-box {
     padding-top: 8rem;
@@ -887,7 +887,7 @@ html.loaded #main .main-menu-wrap {
     padding: 0.5rem;
   }
   #main .main-mo-menu ul > li > a p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: -0.1rem;
   }
   #main .main-mo-menu ul > li > a::before {
@@ -1168,6 +1168,9 @@ html.loaded #main .main-menu-wrap {
     padding-left: 1.5rem;
     font-size: 1.2rem;
   }
+  #main .main-policy .main-policy-list > li:hover {
+    transform: none;
+  }
   #main .main-policy .policy-info-tit {
     flex-direction: column;
     align-items: flex-start !important;
@@ -1233,14 +1236,20 @@ html.loaded #main .main-menu-wrap {
     background-size: contain;
   }
   #main .main-policy .main-policy-banner {
-    margin-top: 3rem;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
   }
   #main .main-policy .main-policy-banner .banner-item {
-    padding: 2rem;
-    background-size: 50%;
+    height: 12rem;
+    padding: 2rem 1rem;
+    background-size: 10rem;
+    background-position: center bottom !important;
+    border-radius: 1rem;
   }
   #main .main-policy .main-policy-banner h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
   }
   #main .main-policy .main-policy-banner .txt {
     margin-top: 2rem;
@@ -1483,6 +1492,9 @@ html.loaded #main .main-menu-wrap {
   }
 }
 @media (max-width: 640px) {
+  #main .main-story .main-tit-wrap h2 {
+    text-align: center;
+  }
   #main .main-story .main-story-wrap {
     margin-top: 2rem;
   }

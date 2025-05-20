@@ -163,7 +163,7 @@
             display: none;
         }
         .main-view {
-            height: 28rem;
+            height: 26rem;
 
             .main-tit-box {
                 padding-top: 8rem;
@@ -280,7 +280,7 @@
                         padding: 0.5rem;
 
                         p {
-                            font-size: 1rem;
+                            font-size: 1.2rem;
                             letter-spacing: -0.1rem;
                         }
                         &::before {
@@ -634,6 +634,10 @@
                         padding-left: 1.5rem;
                         font-size: 1.2rem;
                     }
+
+                    &:hover {
+                        transform: none;
+                    }
                 }
 
                 
@@ -725,14 +729,20 @@
             }
 
             .main-policy-banner {
-                margin-top: 3rem;
+                flex-direction: row;
+                gap: 1rem;
+                margin-top: 2rem;
 
                 .banner-item {
-                    padding: 2rem;
-                    background-size: 50%;
+                    height: 12rem;
+                    padding: 2rem 1rem;
+                    background-size: 10rem;
+                    background-position: center bottom !important;
+                    border-radius: 1rem;
                 }
                 h3 {
-                    font-size: 2rem;
+                    font-size: 1.6rem;
+                    text-align: center;
                 }
                 .txt {
                     margin-top: 2rem;
@@ -1051,6 +1061,12 @@
     }
     @media (max-width: 640px) {
         .main-story {
+            
+            .main-tit-wrap {
+                h2 {
+                    text-align: center;
+                }
+            }
             
             .main-story-wrap {
                 margin-top: 2rem;
