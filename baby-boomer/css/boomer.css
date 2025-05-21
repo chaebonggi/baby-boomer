@@ -1026,7 +1026,7 @@ html.loaded #main .main-menu-wrap {
     display: block;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 640px) {
   #boomer .boomer-top .boomer-tit {
     padding: 2rem;
   }
@@ -1049,6 +1049,8 @@ html.loaded #main .main-menu-wrap {
   display: flex;
 }
 #boomer .boomer-info .info-list .info-list-item .info-cont-img {
+  max-width: 80rem;
+  margin: 0 auto;
   border-radius: 2rem;
   overflow: hidden;
 }
@@ -1144,8 +1146,6 @@ html.loaded #main .main-menu-wrap {
   #boomer .boomer-info .info-list .list-type {
     font-size: 1.6rem;
   }
-}
-@media (max-width: 420px) {
   #boomer .boomer-info .site-list-wrap {
     gap: 0.5rem;
   }
@@ -1218,6 +1218,143 @@ html.loaded #main .main-menu-wrap {
 #boomer .list-type > li li {
   font-weight: 300;
 }
+#boomer .list-link-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#boomer .list-link-box .btn-wrap a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5rem;
+  height: 100%;
+  background-color: #203d87;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+@media (max-width: 640px) {
+  #boomer .list-link-box .btn-wrap a {
+    font-size: 1.6rem;
+  }
+}
+#boomer .step-list-wrap ul {
+  display: flex;
+}
+#boomer .step-list-wrap ul li {
+  flex: 1;
+}
+#boomer .step-list-wrap ul li:last-child .step-img::after {
+  content: none;
+}
+#boomer .step-list-wrap ul li .step-img {
+  width: 14rem;
+  height: 14rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #f1f1f1;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+#boomer .step-list-wrap ul li .step-img::after {
+  content: "";
+  width: 150%;
+  height: 0.1rem;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background-color: #58b1ed;
+}
+#boomer .step-list-wrap ul li .step-img::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5.2rem;
+  margin-top: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#boomer .step-list-wrap ul li .step-img p {
+  margin-top: 1.5rem;
+  color: #333333;
+  font-size: 1.8rem;
+  text-align: center;
+}
+#boomer .step-list-wrap ul li .step-txt {
+  margin-top: 2rem;
+  text-align: center;
+}
+#boomer .step-list-wrap ul li .step-txt strong {
+  color: #333333;
+  font-size: 2rem;
+  font-weight: 700;
+}
+#boomer .step-list-wrap ul li .step-txt p {
+  margin-top: 1rem;
+  color: #333333;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+#boomer .step-list-wrap .step-img.icon01::before {
+  background-image: url("../images/main/step_img01.png");
+}
+#boomer .step-list-wrap .step-img.icon02::before {
+  background-image: url("../images/main/step_img02.png");
+}
+#boomer .step-list-wrap .step-img.icon03::before {
+  background-image: url("../images/main/step_img03.png");
+}
+#boomer .step-list-wrap .step-img.icon04::before {
+  background-image: url("../images/main/step_img04.png");
+}
+@media (max-width: 640px) {
+  #boomer .step-list-wrap ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #boomer .step-list-wrap ul li {
+    display: flex;
+    gap: 1rem;
+  }
+  #boomer .step-list-wrap ul li .step-img {
+    flex-shrink: 0;
+    width: 10rem;
+    height: 10rem;
+    margin: initial;
+  }
+  #boomer .step-list-wrap ul li .step-img::before {
+    height: 3rem;
+    margin-top: 2rem;
+    background-size: contain;
+  }
+  #boomer .step-list-wrap ul li .step-img::after {
+    width: 0.1rem;
+    height: 100%;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+  #boomer .step-list-wrap ul li .step-img p {
+    font-size: 1.4rem;
+  }
+  #boomer .step-list-wrap ul li .step-txt {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  #boomer .step-list-wrap ul li .step-txt strong {
+    font-size: 1.6rem;
+  }
+  #boomer .step-list-wrap ul li .step-txt p {
+    font-size: 1.4rem;
+    letter-spacing: -0.05rem;
+  }
+}
 #boomer .boomer-footer {
   margin-top: 24rem;
   background-color: #203d87;
@@ -1255,6 +1392,9 @@ html.loaded #main .main-menu-wrap {
 @media (max-width: 640px) {
   #boomer {
     padding-top: 8rem;
+  }
+  #boomer .for-tablet-mo {
+    display: none;
   }
 }
 
