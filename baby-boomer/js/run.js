@@ -70,27 +70,27 @@ $(document).ready(function() {
                 nextEl: ".slide-wrap .swiper-button-next",
                 prevEl: ".slide-wrap .swiper-button-prev"
             },
+            pagination: {
+                el: ".swiper-pagination",
+            },
             breakpoints: {
                 768: {
                     slidesPerView: 3,
                     spaceBetween: 20,
-                    // centeredSlides: true,
                 }
             }
         });
-
-        $(".slide-wrap .swiper-start").hide();
         
         $(".slide-wrap .swiper-pause").on("click", function(){
             swiper.autoplay.stop();
-            $(".slide-wrap .swiper-start").show();
-            $(".slide-wrap .swiper-pause").hide();
+            $(".slide-wrap .swiper-start").addClass("show");
+            $(".slide-wrap .swiper-pause").removeClass("show");
         });
 
         $(".slide-wrap .swiper-start").on("click", function(){
             swiper.autoplay.start();
-            $(this).hide();
-            $(".slide-wrap .swiper-pause").show();
+            $(".slide-wrap .swiper-start").removeClass("show");
+            $(".slide-wrap .swiper-pause").addClass("show");
         });
     }
 

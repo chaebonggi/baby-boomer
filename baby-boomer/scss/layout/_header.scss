@@ -29,11 +29,14 @@ html.loaded #header {
                 color: #222;
             }
         }
-        .header-units button {
-            color: #222;
-
-            .svg-icon {
-                background-color: #222;
+        .header-units {
+            .btn {
+                color: #222;                
+                
+                .svg-icon {
+                    background-color: #222;
+                    transition: all 0.35s ease;
+                }
             }
         }
     }
@@ -49,12 +52,15 @@ html.loaded #header {
                 color: #222;
             }
         }
-        .header-units button {
-            color: #222;
+        .header-units {
+            .btn {
+                color: #222;
 
-            .svg-icon {
-                background-color: #222;
+                .svg-icon {
+                    background-color: #222;
+                }
             }
+            
         }
     }
 
@@ -200,7 +206,8 @@ html.loaded #header {
                 z-index: 10;
             }
         }
-        button {
+        .btn {
+            height: 100%;
             color: #fff;
         }
     }
