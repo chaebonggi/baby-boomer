@@ -1196,7 +1196,7 @@ html.loaded #main .main-menu-wrap {
 }
 @media (max-width: 640px) {
   #boomer .boomer-info .info-list {
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 3rem;
   }
   #boomer .boomer-info .info-list .info-list-item {
