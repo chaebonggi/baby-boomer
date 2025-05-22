@@ -45,6 +45,21 @@ $(document).ready(function() {
             }
         }, 100);
     });
+    $('.bookmark').on('click', function () {
+        const url = window.location.href;
+        const title = document.title;
+
+        if (window.external && ('AddFavorite' in window.external)) {
+            // Internet Explorer
+            window.external.AddFavorite(url, title);
+        } else if (window.sidebar && window.sidebar.addPanel) {
+            // Firefox (구버전)
+            window.sidebar.addPanel(title, url, "");
+        } else {
+            // 대부분의 최신 브라우저
+            alert('이 페이지를 즐겨찾기에 추가하려면\nCtrl + D (Windows) 또는 Command + D (Mac)를 눌러주세요!');
+        }
+    });
 
 
     $('#mobileMenuBtn').on('click', function (e) {

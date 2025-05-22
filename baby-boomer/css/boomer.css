@@ -33,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  text-wrap: pretty;
 }
 
 ol, ul {
@@ -93,7 +94,8 @@ input, textarea {
   box-sizing: border-box;
 }
 
-.aria-hidden {
+.aria-hidden,
+caption {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -342,7 +344,7 @@ html, body {
   width: 100%;
 }
 .accordion-container .accordion-tit {
-  margin-top: 6rem;
+  margin: 6rem 0 2rem;
   color: #333333;
   font-size: 2.6rem;
   text-align: center;
@@ -350,8 +352,8 @@ html, body {
 }
 @media (max-width: 640px) {
   .accordion-container .accordion-tit {
-    margin-top: 4rem;
-    font-size: 1.8rem;
+    margin: 4rem 0 1rem;
+    font-size: 1.5rem;
   }
 }
 .accordion-container .accordion-item {
@@ -375,7 +377,8 @@ html, body {
 @media (max-width: 640px) {
   .accordion-container .accordion-item {
     padding: 0 2rem;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
   }
 }
 .accordion-container .accordion-menu {
@@ -397,7 +400,7 @@ html, body {
 }
 @media (max-width: 640px) {
   .accordion-container .accordion-menu {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     padding-right: 2rem;
   }
   .accordion-container .accordion-menu .svg-icon {
@@ -471,15 +474,15 @@ html, body {
   }
   .accordion-container .accordion-img-wrap .accordion-txt-wrap .txt01 {
     padding: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .accordion-container .accordion-img-wrap .accordion-txt-wrap .txt02 {
     margin-top: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .accordion-container .accordion-img-wrap .accordion-txt-wrap .txt03 {
-    margin-top: 1.5rem;
-    font-size: 1.8rem;
+    margin-top: 1em;
+    font-size: 1.5rem;
   }
 }
 .accordion-container .accordion-info-wrap {
@@ -534,6 +537,18 @@ html, body {
 .accordion-container .accordion-info-wrap .info-cont .info-txt span {
   font-weight: 500;
 }
+@media (max-width: 640px) {
+  .accordion-container .accordion-info-wrap .info-cont {
+    padding: 0 1rem;
+  }
+  .accordion-container .accordion-info-wrap .info-cont .info-tit {
+    font-size: 1.6rem;
+  }
+  .accordion-container .accordion-info-wrap .info-cont .info-txt {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+}
 .accordion-container.type02 .accordion-item {
   padding: 0;
   border: none;
@@ -559,6 +574,11 @@ html, body {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 640px) {
+  .accordion-container.type02 .accordion-item .accordion-menu strong {
+    display: block;
+  }
+}
 .accordion-container.type02 .accordion-item.open .accordion-btn::before {
   content: "닫기 X";
 }
@@ -573,8 +593,8 @@ html, body {
 }
 @media (max-width: 640px) {
   .accordion-container.type02 .accordion-menu {
-    padding: 2rem 1.5rem;
-    padding-right: 6rem;
+    padding: 2rem 6.5rem 1.5rem 2rem;
+    border-radius: 1rem;
   }
 }
 .accordion-container.type02 .accordion-cont {
@@ -583,7 +603,7 @@ html, body {
 }
 @media (max-width: 640px) {
   .accordion-container.type02 .accordion-cont {
-    padding: 2rem 0;
+    padding: 2rem 0 0;
   }
 }
 
@@ -984,11 +1004,19 @@ html.loaded #main .main-menu-wrap {
 }
 
 #boomer {
-  padding-top: 13rem;
+  padding-top: 10rem;
 }
 #boomer .boomer-top .boomer-top-wrap {
-  height: 100%;
+  height: 35rem;
   position: relative;
+}
+@media (max-width: 640px) {
+  #boomer .boomer-top .boomer-top-wrap {
+    height: 20rem;
+  }
+}
+#boomer .boomer-top .boomer-img {
+  height: 100%;
 }
 #boomer .boomer-top .boomer-img img {
   width: 100%;
@@ -1007,6 +1035,7 @@ html.loaded #main .main-menu-wrap {
   z-index: 2;
 }
 #boomer .boomer-top .boomer-tit {
+  height: 100%;
   padding: 5rem 4rem;
 }
 #boomer .boomer-top .boomer-tit .tit {
@@ -1031,7 +1060,7 @@ html.loaded #main .main-menu-wrap {
 }
 @media (max-width: 640px) {
   #boomer .boomer-top .boomer-tit {
-    padding: 2rem;
+    padding: 4rem 2rem 2rem;
   }
   #boomer .boomer-top .boomer-tit .tit {
     font-size: 2rem;
@@ -1066,6 +1095,7 @@ html.loaded #main .main-menu-wrap {
 }
 #boomer .boomer-info .info-list .info-box {
   width: 100%;
+  overflow: hidden;
 }
 #boomer .boomer-info .site-list-wrap {
   display: flex;
@@ -1094,6 +1124,11 @@ html.loaded #main .main-menu-wrap {
 }
 #boomer .boomer-info .site-list-wrap .site-item .list-type li {
   font-size: 1.6rem;
+}
+@media (max-width: 640px) {
+  #boomer .boomer-info .site-list-wrap .site-item .list-type li {
+    font-size: 1.3rem;
+  }
 }
 #boomer .boomer-info .site-list-wrap .site-logo {
   display: block;
@@ -1141,13 +1176,19 @@ html.loaded #main .main-menu-wrap {
 @media (max-width: 640px) {
   #boomer .boomer-info .info-list {
     gap: 3rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
   #boomer .boomer-info .info-list .info-list-item {
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  #boomer .boomer-info .info-list .info-tit {
+    font-size: 1.5rem;
   }
   #boomer .boomer-info .info-list .list-type {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+  }
+  #boomer .boomer-info .info-list .list-type li::before {
+    top: 0.9rem;
   }
   #boomer .boomer-info .site-list-wrap {
     gap: 0.5rem;
@@ -1178,7 +1219,7 @@ html.loaded #main .main-menu-wrap {
   line-height: 1.6;
 }
 #boomer .list-type.type02 > li {
-  padding-left: 2.5rem;
+  padding-left: 2rem;
 }
 #boomer .list-type.type02 > li::after {
   content: "①";
@@ -1204,6 +1245,11 @@ html.loaded #main .main-menu-wrap {
 #boomer .list-type.type02 > li.list-tip::after {
   content: "※";
 }
+@media (max-width: 640px) {
+  #boomer .list-type.type02 > li {
+    padding-left: 1.8rem;
+  }
+}
 #boomer .list-type > li {
   position: relative;
   padding-left: 1rem;
@@ -1220,6 +1266,14 @@ html.loaded #main .main-menu-wrap {
 }
 #boomer .list-type > li li {
   font-weight: 300;
+}
+@media (max-width: 640px) {
+  #boomer .list-type {
+    font-size: 1.3rem;
+  }
+  #boomer .list-type li::before {
+    top: 0.9rem;
+  }
 }
 #boomer .list-link-box {
   display: flex;
@@ -1240,15 +1294,22 @@ html.loaded #main .main-menu-wrap {
   border-radius: 1rem;
 }
 @media (max-width: 640px) {
+  #boomer .list-link-box .btn-wrap {
+    width: 100%;
+  }
   #boomer .list-link-box .btn-wrap a {
+    padding: 1.5rem;
     font-size: 1.6rem;
   }
 }
 #boomer .step-list-wrap ul {
   display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
 #boomer .step-list-wrap ul li {
   flex: 1;
+  max-width: 14rem;
 }
 #boomer .step-list-wrap ul li:last-child .step-img::after {
   content: none;
@@ -1265,7 +1326,7 @@ html.loaded #main .main-menu-wrap {
 }
 #boomer .step-list-wrap ul li .step-img::after {
   content: "";
-  width: 150%;
+  width: 100vw;
   height: 0.1rem;
   position: absolute;
   top: 50%;
@@ -1277,8 +1338,9 @@ html.loaded #main .main-menu-wrap {
   content: "";
   display: block;
   width: 100%;
-  height: 5.2rem;
+  height: 4rem;
   margin-top: 3rem;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1294,15 +1356,17 @@ html.loaded #main .main-menu-wrap {
 }
 #boomer .step-list-wrap ul li .step-txt strong {
   color: #333333;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
+  letter-spacing: -0.15rem;
 }
 #boomer .step-list-wrap ul li .step-txt p {
   margin-top: 1rem;
   color: #333333;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.5;
+  letter-spacing: -0.15rem;
 }
 #boomer .step-list-wrap .step-img.icon01::before {
   background-image: url("../images/main/step_img01.png");
@@ -1316,7 +1380,16 @@ html.loaded #main .main-menu-wrap {
 #boomer .step-list-wrap .step-img.icon04::before {
   background-image: url("../images/main/step_img04.png");
 }
-@media (max-width: 640px) {
+#boomer .step-list-wrap .step-img.icon05::before {
+  background-image: url("../images/main/step_img05.png");
+}
+#boomer .step-list-wrap .step-img.icon06::before {
+  background-image: url("../images/main/step_img06.png");
+}
+#boomer .step-list-wrap .step-img.icon07::before {
+  background-image: url("../images/main/step_img07.png");
+}
+@media (max-width: 768px) {
   #boomer .step-list-wrap ul {
     flex-direction: column;
     gap: 2rem;
@@ -1324,6 +1397,7 @@ html.loaded #main .main-menu-wrap {
   #boomer .step-list-wrap ul li {
     display: flex;
     gap: 1rem;
+    max-width: 100%;
   }
   #boomer .step-list-wrap ul li .step-img {
     flex-shrink: 0;
@@ -1343,20 +1417,108 @@ html.loaded #main .main-menu-wrap {
     top: 100%;
     transform: translateX(-50%);
   }
-  #boomer .step-list-wrap ul li .step-img p {
-    font-size: 1.4rem;
-  }
   #boomer .step-list-wrap ul li .step-txt {
     margin-top: 1rem;
     text-align: left;
   }
-  #boomer .step-list-wrap ul li .step-txt strong {
-    font-size: 1.6rem;
-  }
   #boomer .step-list-wrap ul li .step-txt p {
-    font-size: 1.4rem;
     letter-spacing: -0.05rem;
   }
+}
+@media (max-width: 640px) {
+  #boomer .step-list-wrap ul li .step-img p {
+    font-size: 1.3rem;
+  }
+  #boomer .step-list-wrap ul li .step-txt strong {
+    font-size: 1.5rem;
+  }
+  #boomer .step-list-wrap ul li .step-txt p {
+    font-size: 1.3rem;
+  }
+}
+#boomer .table-list-wrap .line-left01 {
+  border-left: 0.1rem solid #ddd;
+}
+#boomer .table-list-wrap .bg-white {
+  background-color: #fff;
+}
+#boomer .table-list-wrap .bg-skyblue {
+  background-color: #e9f3ff;
+}
+#boomer .table-list-wrap .fw-500 {
+  font-weight: 500;
+}
+#boomer .table-list-wrap .tlt {
+  text-align: left;
+}
+#boomer .table-list-wrap table {
+  width: 100%;
+  border: 0.1rem solid #ddd;
+  border-left: 0;
+  border-right: 0;
+}
+#boomer .table-list-wrap thead th,
+#boomer .table-list-wrap tbody th,
+#boomer .table-list-wrap tbody td {
+  padding: 1.5rem;
+  color: #333333;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+  vertical-align: middle;
+  border-bottom: 0.1rem solid #ddd;
+  text-align: center;
+}
+#boomer .table-list-wrap thead th {
+  background-color: #e9f3ff;
+}
+#boomer .table-list-wrap thead th:not(:first-child) {
+  border-left: 0.1rem solid #ddd;
+}
+#boomer .table-list-wrap tbody th {
+  font-weight: 500;
+}
+#boomer .table-list-wrap tbody td:not(:first-child) {
+  border-left: 0.1rem solid #ddd;
+}
+@media (max-width: 1024px) {
+  #boomer .table-list-wrap {
+    overflow-x: scroll;
+  }
+  #boomer .table-list-wrap table {
+    min-width: 100rem;
+  }
+}
+@media (max-width: 768px) {
+  #boomer .table-list-wrap thead th {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+  #boomer .table-list-wrap tbody th,
+  #boomer .table-list-wrap tbody td {
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+}
+#boomer .info-list-img {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+#boomer .info-list-img ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#boomer .info-list-img ul li {
+  flex: 1 1 40%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#boomer .info-list-img ul li picture {
+  display: block;
+}
+#boomer .info-list-img ul li picture img {
+  height: 100%;
 }
 #boomer .boomer-footer {
   margin-top: 24rem;

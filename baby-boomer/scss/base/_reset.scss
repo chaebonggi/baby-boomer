@@ -34,6 +34,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  text-wrap: pretty;
 }
 
 ol, ul {
@@ -94,7 +95,8 @@ input, textarea {
   box-sizing: border-box;
 }
 
-.aria-hidden {
+.aria-hidden,
+caption {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

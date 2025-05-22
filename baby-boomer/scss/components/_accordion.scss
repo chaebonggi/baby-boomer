@@ -5,15 +5,15 @@
     width: 100%;
 
     .accordion-tit {
-        margin-top: 6rem;
+        margin: 6rem 0 2rem;
         color: #333333;
         font-size: 2.6rem;
         text-align: center;
         letter-spacing: -0.05rem;
 
         @media (max-width: 640px) {
-            margin-top: 4rem;
-            font-size: 1.8rem;
+            margin: 4rem 0 1rem;
+            font-size: 1.5rem;
         }
     }
     
@@ -41,7 +41,8 @@
         }
         @media (max-width: 640px) {
             padding: 0 2rem;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
+            border-radius: 1rem;
         }
     }
     .accordion-menu {
@@ -63,7 +64,7 @@
             transition: all 0.35s ease;
         }
         @media (max-width: 640px) {
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             padding-right: 2rem;
 
             .svg-icon { 
@@ -140,15 +141,15 @@
                 }
                 .txt01 {
                     padding: 0 1rem;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                 }
                 .txt02 {
                     margin-top: 1rem;
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                 }
                 .txt03 {
-                    margin-top: 1.5rem;
-                    font-size: 1.8rem;
+                    margin-top: 1em;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -208,7 +209,18 @@
                 span {
                     font-weight: 500;
                 }
-            }            
+            }
+            @media (max-width: 640px) {
+                padding: 0 1rem;
+
+                .info-tit {
+                    font-size: 1.6rem;
+                }
+                .info-txt {
+                    margin-top: 1rem;
+                    font-size: 1.3rem;
+                }
+            }          
         }
     }
 
@@ -237,6 +249,14 @@
                     }
                 }
             }
+            @media (max-width: 640px){
+                .accordion-menu {
+                    strong {
+                        display: block;
+                    }
+                }
+            }
+            
             
             &.open {
                 .accordion-btn {
@@ -256,8 +276,8 @@
             border-radius: 2rem;
             
             @media (max-width: 640px) {
-                padding: 2rem 1.5rem;        
-                padding-right: 6rem;   
+                padding: 2rem 6.5rem 1.5rem 2rem;
+                border-radius: 1rem;
             }
         }
         .accordion-cont {
@@ -265,7 +285,7 @@
             border-top: none;
 
             @media (max-width: 640px) {
-                padding: 2rem 0;
+                padding: 2rem 0 0;
             }
         }
     }
