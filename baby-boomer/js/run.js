@@ -199,6 +199,45 @@ $(document).ready(function() {
         });
     });
 
+    //앨범 swiper 
+    let swiperInstance = null;
+
+    function initSwiperIfNeeded() {
+    const isMobile = window.innerWidth <= 640;
+    const swiperEl = document.querySelector('.info-album-wrap .swiper');
+    if (!swiperEl) {
+        if (swiperInstance) {
+        swiperInstance.destroy();
+        swiperInstance = null;
+        }
+        return;
+    }
+
+    if (isMobile && !swiperInstance) {
+        swiperInstance = new Swiper(swiperEl, {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.info-album-wrap .swiper-pagination',
+            clickable: true,
+        },
+        });
+    } else if (!isMobile && swiperInstance) {
+        swiperInstance.destroy();
+        swiperInstance = null;
+    }
+    }
+
+    window.addEventListener('load', initSwiperIfNeeded);
+    window.addEventListener('resize', initSwiperIfNeeded);
+
+
+
 });
 $(function(){
     $("html, body").animate({ scrollTop: 0 }, "fast"); 
