@@ -1,13 +1,15 @@
 #boomer {
-    padding-top: 10rem;
-    
+   
+    .for-mo {
+        display: none;
+    }
     .boomer-top {
         .boomer-top-wrap {
-            height: 35rem;
+            height: 46rem;
             position: relative;
             
             @media (max-width: 640px) {
-                height: 20rem;
+                height: 29rem;
             }
         }
         .boomer-img {
@@ -32,16 +34,16 @@
         }
         .boomer-tit {
             height: 100%;
-            padding: 5rem 4rem;
+            padding-top: 18.6rem;
 
             .tit {
-                color: #333333;
+                color: #fff;
                 font-size: 3.2rem;
                 font-weight: 900;
             }
             .txt {
                 margin-top: 3rem;
-                color: #333333;
+                color: #fff;
                 font-size: 1.8rem;
                 line-height: 1.8;
                 letter-spacing: -0.05rem;
@@ -60,7 +62,7 @@
         }
         @media (max-width: 640px) {
             .boomer-tit {
-                padding: 4rem 2rem 2rem;
+                padding-top: 10rem;
 
                 .tit {
                     font-size: 2rem;
@@ -98,6 +100,7 @@
                 color: #333333;
                 font-size: 2rem;
                 font-weight: 700;
+                line-height: 1.5;
             }
             .info-box {
                 width: 100%;
@@ -213,7 +216,7 @@
 
                     li {
                         &::before {
-                            top: 0.9rem
+                            top: 0.8rem
                         }
                     }
                 }                
@@ -242,13 +245,12 @@
             }        
         }
     }
-    .list-type {
-        margin-top: -0.2rem;
+    .list-type {        
         color: #333333;
         font-size: 1.8rem;
         font-weight: 400;
         letter-spacing: -0.05rem;
-        line-height: 1.6;
+        line-height: 1.5;
 
         &.type02 {
             > li {
@@ -312,13 +314,16 @@
             li {
                 font-weight: 300;
             }
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
         }
         @media (max-width: 640px) {
             font-size: 1.3rem;
 
-            li {
-                &::before {
-                    top: 0.9rem
+            > li {
+                &:not(:first-child) {
+                    margin-top: 0.5rem;
                 }
             }
         }
@@ -616,6 +621,25 @@
         }
     }
 
+    .info-link-box {
+
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 1rem;
+            padding: 0.5rem 2rem;
+            background-color: #203d87;
+            color: #fff;
+            font-size: 1.6rem;
+            border-radius: 3rem;
+        }
+        @media (max-width: 640px) {
+            .link-btn {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
     .boomer-footer {
         margin-top: 24rem;
         background-color: #203d87;
@@ -653,8 +677,7 @@
         }
     }
     @media (max-width: 640px) {
-        padding-top: 8rem;
-
+        .for-mo {display: block;}
         .for-tablet-mo {
             display: none;
         }

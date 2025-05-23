@@ -5,6 +5,10 @@
     max-width: 122rem;
     padding: 0 1rem;
     margin: 0 auto;
+
+    @media (max-width: 640px) {
+        padding: 0 2rem;
+    }
 }
 html body.scroll-hide {
     overflow: hidden;

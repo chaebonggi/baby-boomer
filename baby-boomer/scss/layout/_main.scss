@@ -944,6 +944,9 @@
                             background-color: #f3970f;
                             color: #fff;
                         }
+                        &::after {
+                            content: none;
+                        }
                     }
                     
                 }

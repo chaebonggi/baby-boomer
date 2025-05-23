@@ -284,18 +284,18 @@ html.loaded #header {
                 color: #222222;
                 font-size: 1.6rem;
 
-                span {
-                    background-image: linear-gradient(transparent calc(100% - 1px), #222222 1px);
-                    background-repeat: no-repeat;
-                    background-size: 0% 100%;
-                    transition: background-size 0.35s;
-                }
+                // span {
+                //     background-image: linear-gradient(transparent calc(100% - 1px), #222222 1px);
+                //     background-repeat: no-repeat;
+                //     background-size: 0% 100%;
+                //     transition: background-size 0.35s;
+                // }
                 
-                &:hover {
-                    span {
-                        background-size: 100% 100%;
-                    }
-                }
+                // &:hover {
+                //     span {
+                //         background-size: 100% 100%;
+                //     }
+                // }
             }
         }
     }
