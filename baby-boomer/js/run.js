@@ -236,9 +236,30 @@ $(document).ready(function() {
     window.addEventListener('load', initSwiperIfNeeded);
     window.addEventListener('resize', initSwiperIfNeeded);
 
-
-
 });
-$(function(){
-    $("html, body").animate({ scrollTop: 0 }, "fast"); 
-});
+
+(function() {
+  window.addEventListener('load', () => {
+    const scrollTarget = sessionStorage.getItem('scrollTarget');
+    if (scrollTarget) {
+      sessionStorage.removeItem('scrollTarget');
+      const targetEl = document.getElementById(scrollTarget);
+      if (targetEl) {
+        const yOffset = -100;
+        const y = targetEl.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[data-scroll-target]');
+    if (link) {
+      const target = link.getAttribute('data-scroll-target');
+      if (target) {
+        sessionStorage.setItem('scrollTarget', target);
+      }
+    }
+  });
+})();
+

@@ -488,14 +488,23 @@ html, body {
 .accordion-container .accordion-info-wrap {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 .accordion-container .accordion-info-wrap .accordion-info-item {
   display: flex;
   gap: 2rem 4rem;
 }
-.accordion-container .accordion-info-wrap .accordion-info-item.ch-order .info-img {
-  order: 3;
+.accordion-container .accordion-info-wrap .accordion-info-item.full {
+  flex-wrap: wrap;
+}
+.accordion-container .accordion-info-wrap .accordion-info-item.full > * {
+  width: 100%;
+}
+.accordion-container .accordion-info-wrap .accordion-info-item.full img {
+  width: 100%;
+}
+.accordion-container .accordion-info-wrap .accordion-info-item .info-item-box {
+  flex: 1 1 40%;
 }
 @media (max-width: 768px) {
   .accordion-container .accordion-info-wrap .accordion-info-item {
@@ -506,9 +515,7 @@ html, body {
   }
 }
 .accordion-container .accordion-info-wrap .info-img {
-  flex-shrink: 0;
-  width: 29.17vw;
-  height: 100%;
+  width: 100%;
   overflow: hidden;
   order: 1;
 }
@@ -519,20 +526,19 @@ html, body {
 }
 .accordion-container .accordion-info-wrap .info-img img {
   margin: 0 auto;
-}
-.accordion-container .accordion-info-wrap .info-cont {
-  order: 2;
+  width: 100%;
 }
 .accordion-container .accordion-info-wrap .info-cont .info-tit {
-  color: #000000;
-  font-size: 2rem;
+  color: #13407e;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 .accordion-container .accordion-info-wrap .info-cont .info-txt {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #333333;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
+  letter-spacing: 0.05rem;
 }
 .accordion-container .accordion-info-wrap .info-cont .info-txt span {
   font-weight: 500;
