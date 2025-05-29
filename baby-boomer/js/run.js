@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     // 1차 메뉴에 마우스 hover 시 서브 메뉴 표시
     $('#gnb .gnb-list > li').on('mouseenter', function() {
         // #header에 open 클래스가 있으면 동작하지 않음
@@ -176,14 +177,15 @@ $(document).ready(function() {
     };
 
     // 아코디언 메뉴
-    $('.accordion-container').each(function () {
-        const $container = $(this);
-        const $items = $container.find('.accordion-item');
+    // 부머 스토리 include 후, 콜백 안에서 아코디언 실행
+    $("#boomer-story").load("boomer-story.html", function () {
+        // boomer-story.html 로드 완료 후 실행
+        $('.accordion-container').each(function () {
+            const $container = $(this);
+            const $items = $container.find('.accordion-item');
+            $items.find('.accordion-cont').hide();
 
-        // 초기화: 닫기
-        $items.find('.accordion-cont').hide();
-
-        $container.on('click', '.accordion-menu', function () {
+            $container.on('click', '.accordion-menu', function () {
             const $item = $(this).closest('.accordion-item');
             const $content = $item.find('.accordion-cont');
             const isOpen = $item.hasClass('open');
@@ -196,8 +198,32 @@ $(document).ready(function() {
                 $item.addClass('open');
                 $content.stop(true, true).slideDown();
             }
+            });
         });
     });
+
+    // $('.accordion-container').each(function () {
+    //     const $container = $(this);
+    //     const $items = $container.find('.accordion-item');
+
+    //     // 초기화: 닫기
+    //     $items.find('.accordion-cont').hide();
+
+    //     $container.on('click', '.accordion-menu', function () {
+    //         const $item = $(this).closest('.accordion-item');
+    //         const $content = $item.find('.accordion-cont');
+    //         const isOpen = $item.hasClass('open');
+
+    //         if (isOpen) {
+    //             $content.stop(true, true).slideUp();
+    //             $item.removeClass('open');
+    //         } else {
+    //             $items.removeClass('open').find('.accordion-cont').stop(true, true).slideUp();
+    //             $item.addClass('open');
+    //             $content.stop(true, true).slideDown();
+    //         }
+    //     });
+    // });
 
     //앨범 swiper 
     let swiperInstance = null;
