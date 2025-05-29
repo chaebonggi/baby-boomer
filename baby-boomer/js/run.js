@@ -264,17 +264,27 @@ $(document).ready(function() {
 
 });
 
-(function() {
+(function () {
   window.addEventListener('load', () => {
     const scrollTarget = sessionStorage.getItem('scrollTarget');
     if (scrollTarget) {
       sessionStorage.removeItem('scrollTarget');
-      const targetEl = document.getElementById(scrollTarget);
-      if (targetEl) {
-        const yOffset = -100;
-        const y = targetEl.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
+
+      // 최대 10번 시도 (0.1초 간격)
+      let attempts = 0;
+      const maxAttempts = 10;
+      const interval = setInterval(() => {
+        const targetEl = document.getElementById(scrollTarget);
+        if (targetEl || attempts >= maxAttempts) {
+          clearInterval(interval);
+          if (targetEl) {
+            const yOffset = -100;
+            const y = targetEl.getBoundingClientRect().top + window.scrollY + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+        attempts++;
+      }, 100);
     }
   });
 
@@ -288,4 +298,5 @@ $(document).ready(function() {
     }
   });
 })();
+
 

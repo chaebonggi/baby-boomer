@@ -43,6 +43,10 @@
             padding: 0 2rem;
             font-size: 1.3rem;
             border-radius: 1rem;
+            
+            .mt40 {
+                margin-top: 2rem;
+            }
         }
     }
     .accordion-menu {
@@ -176,11 +180,24 @@
             }
             .info-item-box {
                 flex: 1 1 40%;
+
+                &.bg {
+                    background-repeat: no-repeat;
+                    background-position: bottom left;
+                    &.bg-icon01 {
+                        background-image: url(../images/main/bg_icon01.png);
+                    }
+                }
             }
 
             @media (max-width: 768px) {
                 flex-direction: column;
-
+                
+                .info-item-box {
+                    &.bg {
+                        background: none !important;
+                    }
+                }
                 .for-pc {
                     display: none;
                 }
@@ -206,6 +223,15 @@
                 color: #13407e;
                 font-size: 1.8rem;
                 font-weight: 700;
+
+                .info-tit-tag {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                }
+            }
+            .info-tit02 {
+                font-size: 3rem;
+                font-weight: 600;
             }
             .info-txt {
                 margin-top: 1rem;
@@ -221,6 +247,9 @@
             @media (max-width: 640px) {
                 padding: 0 1rem;
 
+                .info-tit02 {
+                    font-size: 1.8rem;
+                }
                 .info-tit {
                     font-size: 1.6rem;
                 }

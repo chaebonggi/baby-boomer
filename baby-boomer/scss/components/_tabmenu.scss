@@ -61,12 +61,6 @@
             font-weight: 600;
             cursor: pointer;
 
-            &:focus {
-                outline: 0;
-                border: 0;
-                box-shadow: none;
-            }
-
             &.active {                
                 color: #333;
                 

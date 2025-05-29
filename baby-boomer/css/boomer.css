@@ -72,12 +72,14 @@ button {
   -moz-osx-font-smoothing: inherit;
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 /* Focus outline handling for accessibility */
 button:focus, input:focus, textarea:focus, a:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #222;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
 }
 
 a {
@@ -380,6 +382,9 @@ html, body {
     font-size: 1.3rem;
     border-radius: 1rem;
   }
+  .accordion-container .accordion-item .mt40 {
+    margin-top: 2rem;
+  }
 }
 .accordion-container .accordion-menu {
   position: relative;
@@ -506,9 +511,19 @@ html, body {
 .accordion-container .accordion-info-wrap .accordion-info-item .info-item-box {
   flex: 1 1 40%;
 }
+.accordion-container .accordion-info-wrap .accordion-info-item .info-item-box.bg {
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.accordion-container .accordion-info-wrap .accordion-info-item .info-item-box.bg.bg-icon01 {
+  background-image: url(../images/main/bg_icon01.png);
+}
 @media (max-width: 768px) {
   .accordion-container .accordion-info-wrap .accordion-info-item {
     flex-direction: column;
+  }
+  .accordion-container .accordion-info-wrap .accordion-info-item .info-item-box.bg {
+    background: none !important;
   }
   .accordion-container .accordion-info-wrap .accordion-info-item .for-pc {
     display: none;
@@ -533,6 +548,14 @@ html, body {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.accordion-container .accordion-info-wrap .info-cont .info-tit .info-tit-tag {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.accordion-container .accordion-info-wrap .info-cont .info-tit02 {
+  font-size: 3rem;
+  font-weight: 600;
+}
 .accordion-container .accordion-info-wrap .info-cont .info-txt {
   margin-top: 1rem;
   color: #333333;
@@ -546,6 +569,9 @@ html, body {
 @media (max-width: 640px) {
   .accordion-container .accordion-info-wrap .info-cont {
     padding: 0 1rem;
+  }
+  .accordion-container .accordion-info-wrap .info-cont .info-tit02 {
+    font-size: 1.8rem;
   }
   .accordion-container .accordion-info-wrap .info-cont .info-tit {
     font-size: 1.6rem;
@@ -673,11 +699,6 @@ html, body {
   font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
-}
-.tab-container .tab-list .btn-tab:focus {
-  outline: 0;
-  border: 0;
-  box-shadow: none;
 }
 .tab-container .tab-list .btn-tab.active {
   color: #333;
@@ -1017,6 +1038,14 @@ html.loaded #header {
 
 .mt60 {
   margin-top: 6rem;
+}
+
+.fc-orange {
+  color: #f9943a !important;
+}
+
+.fc-black {
+  color: #222222 !important;
 }
 
 .container-lg {

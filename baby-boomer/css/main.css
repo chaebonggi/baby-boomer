@@ -72,12 +72,14 @@ button {
   -moz-osx-font-smoothing: inherit;
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 /* Focus outline handling for accessibility */
 button:focus, input:focus, textarea:focus, a:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #222;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
 }
 
 a {
@@ -397,11 +399,6 @@ html, body {
   font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
-}
-.tab-container .tab-list .btn-tab:focus {
-  outline: 0;
-  border: 0;
-  box-shadow: none;
 }
 .tab-container .tab-list .btn-tab.active {
   color: #333;
@@ -741,6 +738,14 @@ html.loaded #header {
 
 .mt60 {
   margin-top: 6rem;
+}
+
+.fc-orange {
+  color: #f9943a !important;
+}
+
+.fc-black {
+  color: #222222 !important;
 }
 
 .container-lg {
