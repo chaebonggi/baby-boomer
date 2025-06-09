@@ -298,7 +298,7 @@
 
             &.list-tip {
                 padding-left: 2rem;
-                
+
                 &::after {
                     content: '※';
                     position: absolute;
@@ -334,6 +334,9 @@
                 &:not(:first-child) {
                     margin-top: 0.5rem;
                 }
+                 &.list-tip {
+                    padding-left: 1.5rem;
+                 }
             }
         }
     }

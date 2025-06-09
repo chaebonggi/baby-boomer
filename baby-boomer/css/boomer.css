@@ -1386,6 +1386,9 @@ html.loaded #main .main-menu-wrap {
   #boomer .list-type > li:not(:first-child) {
     margin-top: 0.5rem;
   }
+  #boomer .list-type > li.list-tip {
+    padding-left: 1.5rem;
+  }
 }
 #boomer .list-link-box {
   display: flex;
