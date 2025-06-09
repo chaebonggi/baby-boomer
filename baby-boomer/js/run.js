@@ -177,31 +177,6 @@ $(document).ready(function() {
     };
 
     // 아코디언 메뉴
-    // 부머 스토리 include 후, 콜백 안에서 아코디언 실행
-    // $("#boomer-story").load("boomer-story.html", function () {
-    //     // boomer-story.html 로드 완료 후 실행
-    //     $('.accordion-container').each(function () {
-    //         const $container = $(this);
-    //         const $items = $container.find('.accordion-item');
-    //         // $items.find('.accordion-cont').hide();
-
-    //         $container.on('click', '.accordion-menu', function () {
-    //         const $item = $(this).closest('.accordion-item');
-    //         const $content = $item.find('.accordion-cont');
-    //         const isOpen = $item.hasClass('open');
-
-    //         if (isOpen) {
-    //             // $content.stop(true, true).slideUp();
-    //             $item.removeClass('open');
-    //         } else {
-    //             // $items.removeClass('open').find('.accordion-cont').stop(true, true).slideUp();
-    //             $items.removeClass('open');
-    //             $item.addClass('open');
-    //             // $content.stop(true, true).slideDown();
-    //         }
-    //         });
-    //     });
-    // });
     $("#boomer-story").load("boomer-story.html", function () {
         const params = new URLSearchParams(window.location.search);
         const targetIndex = parseInt(params.get('accordion'));
@@ -243,30 +218,51 @@ $(document).ready(function() {
         });
     });
 
+    // $("#boomer-story").load("boomer-story.html", function () {
+    //     const params = new URLSearchParams(window.location.search);
+    //     const targetIndex = parseInt(params.get('accordion'));
 
+    //     $('.accordion-container').each(function () {
+    //         const $container = $(this);
+    //         const $items = $container.find('.accordion-item');
 
-    // $('.accordion-container').each(function () {
-    //     const $container = $(this);
-    //     const $items = $container.find('.accordion-item');
+    //         $items.find('.accordion-cont').hide();
+    //         $items.removeClass('open');
 
-    //     // 초기화: 닫기
-    //     $items.find('.accordion-cont').hide();
+    //         if (!isNaN(targetIndex) && targetIndex > 0 && targetIndex <= $items.length) {
+    //             const $target = $items.eq(targetIndex - 1);
+    //             $target.addClass('open');
 
-    //     $container.on('click', '.accordion-menu', function () {
-    //         const $item = $(this).closest('.accordion-item');
-    //         const $content = $item.find('.accordion-cont');
-    //         const isOpen = $item.hasClass('open');
-
-    //         if (isOpen) {
-    //             $content.stop(true, true).slideUp();
-    //             $item.removeClass('open');
-    //         } else {
-    //             $items.removeClass('open').find('.accordion-cont').stop(true, true).slideUp();
-    //             $item.addClass('open');
-    //             $content.stop(true, true).slideDown();
+    //             $target.find('.accordion-cont').slideDown(function() {
+    //                 $('html, body').animate({
+    //                     scrollTop: $target.offset().top - 20
+    //                 }, 500);
+    //             });
     //         }
+
+    //         $container.on('click', '.accordion-menu', function () {
+    //             const $item = $(this).closest('.accordion-item');
+    //             const $content = $item.find('.accordion-cont');
+    //             const isOpen = $item.hasClass('open');
+
+    //             if (isOpen) {
+    //                 $content.stop(true, true).slideUp();
+    //                 $item.removeClass('open');
+    //             } else {
+    //                 $items.removeClass('open')
+    //                     .find('.accordion-cont').stop(true, true).slideUp();
+
+    //                 $item.addClass('open');
+    //                 $content.stop(true, true).slideDown(function() {
+    //                     $('html, body').animate({
+    //                         scrollTop: $item.offset().top - 20
+    //                     }, 500);
+    //                 });
+    //             }
+    //         });
     //     });
     // });
+
 
     //앨범 swiper 
     let swiperInstance = null;
