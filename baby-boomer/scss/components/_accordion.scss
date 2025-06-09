@@ -222,12 +222,22 @@
                 width: 100%;
             }
         }
+        
         .info-cont {
+            
+            .info-tit-box {
+                padding: 2rem;
+                background-color: #13517d;
+                border-radius: 1rem;
 
+                .info-tit {
+                    color: #fff;
+                }
+            }
             .info-tit {
                 color: #13407e;
                 font-size: 1.8rem;
-                font-weight: 700;
+                font-weight: 500;
 
                 .info-tit-tag {
                     display: block;
@@ -236,7 +246,7 @@
             }
             .info-tit02 {
                 font-size: 3rem;
-                font-weight: 600;
+                font-weight: 500;
             }
             .info-txt {
                 margin-top: 1rem;
@@ -256,7 +266,7 @@
                     font-size: 1.8rem;
                 }
                 .info-tit {
-                    font-size: 1.6rem;
+                    font-size: 1.3rem;
                 }
                 .info-txt {
                     margin-top: 1rem;
