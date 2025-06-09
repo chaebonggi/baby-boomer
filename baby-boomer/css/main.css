@@ -1404,6 +1404,10 @@ html.loaded #main .main-menu-wrap {
   #main .main-policy .policy-info .policy-info-txt p .txt01 {
     font-size: 1.6rem;
   }
+  #main .main-policy .policy-info .policy-info-txt p .txt02 {
+    color: #b6b6b6;
+    font-size: 1.2rem;
+  }
   #main .main-policy .policy-info .policy-info-list {
     margin-top: 2rem;
   }
