@@ -1046,6 +1046,10 @@ html.loaded #header {
   }
 }
 
+.mt10 {
+  margin-top: 1rem;
+}
+
 .mt20 {
   margin-top: 2rem;
 }
@@ -1056,6 +1060,10 @@ html.loaded #header {
 
 .mt60 {
   margin-top: 6rem;
+}
+
+.mb10 {
+  margin-bottom: 1rem;
 }
 
 .fc-orange {
