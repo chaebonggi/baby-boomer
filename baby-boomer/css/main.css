@@ -1106,7 +1106,7 @@ html.loaded #main .main-menu-wrap {
   transition: all 0.35s ease;
 }
 #main .main-policy .main-policy-list > li.banner {
-  background: url(../images/main/policy_banner.png) bottom 5rem right no-repeat;
+  background: url(../images/main/policy_banner02.png) bottom 5rem right no-repeat;
 }
 #main .main-policy .main-policy-list > li.banner:hover {
   transform: none;
