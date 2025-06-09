@@ -38,6 +38,7 @@
                     transition: all 0.35s ease;
                 }
             }
+            
         }
         @media (max-width: 640px) {
             padding: 0 2rem;
@@ -78,6 +79,7 @@
         }
     }
     .accordion-cont {
+        display: none;
         padding: 4rem 0;
         border-top: 1px solid #e5e5e5;
 
@@ -186,6 +188,9 @@
                     background-position: bottom left;
                     &.bg-icon01 {
                         background-image: url(../images/main/bg_icon01.png);
+                    }
+                    &.bg-icon02 {
+                        background-image: url(../images/main/bg_icon02.png);
                     }
                 }
             }

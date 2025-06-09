@@ -178,29 +178,72 @@ $(document).ready(function() {
 
     // 아코디언 메뉴
     // 부머 스토리 include 후, 콜백 안에서 아코디언 실행
+    // $("#boomer-story").load("boomer-story.html", function () {
+    //     // boomer-story.html 로드 완료 후 실행
+    //     $('.accordion-container').each(function () {
+    //         const $container = $(this);
+    //         const $items = $container.find('.accordion-item');
+    //         // $items.find('.accordion-cont').hide();
+
+    //         $container.on('click', '.accordion-menu', function () {
+    //         const $item = $(this).closest('.accordion-item');
+    //         const $content = $item.find('.accordion-cont');
+    //         const isOpen = $item.hasClass('open');
+
+    //         if (isOpen) {
+    //             // $content.stop(true, true).slideUp();
+    //             $item.removeClass('open');
+    //         } else {
+    //             // $items.removeClass('open').find('.accordion-cont').stop(true, true).slideUp();
+    //             $items.removeClass('open');
+    //             $item.addClass('open');
+    //             // $content.stop(true, true).slideDown();
+    //         }
+    //         });
+    //     });
+    // });
     $("#boomer-story").load("boomer-story.html", function () {
-        // boomer-story.html 로드 완료 후 실행
+        const params = new URLSearchParams(window.location.search);
+        const targetIndex = parseInt(params.get('accordion'));
+
         $('.accordion-container').each(function () {
             const $container = $(this);
             const $items = $container.find('.accordion-item');
+
+            // 모든 콘텐츠 초기 숨김 (JS로 제어)
             $items.find('.accordion-cont').hide();
+            $items.removeClass('open');
+
+            // 파라미터로 해당 아코디언 열기
+            if (!isNaN(targetIndex) && targetIndex > 0 && targetIndex <= $items.length) {
+                const $target = $items.eq(targetIndex - 1);
+                $target.addClass('open');
+                $target.find('.accordion-cont').slideDown();
+            }
 
             $container.on('click', '.accordion-menu', function () {
-            const $item = $(this).closest('.accordion-item');
-            const $content = $item.find('.accordion-cont');
-            const isOpen = $item.hasClass('open');
+                const $item = $(this).closest('.accordion-item');
+                const $content = $item.find('.accordion-cont');
+                const isOpen = $item.hasClass('open');
 
-            if (isOpen) {
-                $content.stop(true, true).slideUp();
-                $item.removeClass('open');
-            } else {
-                $items.removeClass('open').find('.accordion-cont').stop(true, true).slideUp();
-                $item.addClass('open');
-                $content.stop(true, true).slideDown();
-            }
+                if (isOpen) {
+                    // 닫기
+                    $content.stop(true, true).slideUp();
+                    $item.removeClass('open');
+                } else {
+                    // 다른 아이템 닫기
+                    $items.removeClass('open')
+                        .find('.accordion-cont').stop(true, true).slideUp();
+
+                    // 현재 아이템 열기
+                    $item.addClass('open');
+                    $content.stop(true, true).slideDown();
+                }
             });
         });
     });
+
+
 
     // $('.accordion-container').each(function () {
     //     const $container = $(this);
