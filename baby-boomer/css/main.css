@@ -1389,6 +1389,9 @@ html.loaded #main .main-menu-wrap {
     font-size: 2rem;
     order: 2;
   }
+  #main .main-policy .policy-info h3 span {
+    font-size: 1.5rem;
+  }
   #main .main-policy .policy-info .tag {
     margin-left: 0;
     font-size: 1.2rem;
