@@ -1,3 +1,10 @@
+$pages: (
+    "light-job",
+    "social-contribution",
+    "internship-camp",
+    "internship-company",
+    "internship-consulting"
+);
 .accordion-container {
     display: flex;
     flex-direction: column;
@@ -278,10 +285,21 @@
 
     &.type02 {
         .accordion-item {
+            display: none;
             padding: 0;
             border: none;
             border-radius: initial;
             
+            &[data-show-all="true"] {
+                display: block;
+            }
+            @each $page in $pages {
+                body[data-page="#{$page}"] & {
+                    &[data-show-#{$page}="true"] {
+                        display: block;
+                    }
+                }
+            }
             .accordion-btn {
                 position: absolute;
                 top: 50%;

@@ -608,9 +608,28 @@ html, body {
   }
 }
 .accordion-container.type02 .accordion-item {
+  display: none;
   padding: 0;
   border: none;
   border-radius: initial;
+}
+.accordion-container.type02 .accordion-item[data-show-all=true] {
+  display: block;
+}
+body[data-page=light-job] .accordion-container.type02 .accordion-item[data-show-light-job=true] {
+  display: block;
+}
+body[data-page=social-contribution] .accordion-container.type02 .accordion-item[data-show-social-contribution=true] {
+  display: block;
+}
+body[data-page=internship-camp] .accordion-container.type02 .accordion-item[data-show-internship-camp=true] {
+  display: block;
+}
+body[data-page=internship-company] .accordion-container.type02 .accordion-item[data-show-internship-company=true] {
+  display: block;
+}
+body[data-page=internship-consulting] .accordion-container.type02 .accordion-item[data-show-internship-consulting=true] {
+  display: block;
 }
 .accordion-container.type02 .accordion-item .accordion-btn {
   position: absolute;
