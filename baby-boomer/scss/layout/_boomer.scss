@@ -651,14 +651,33 @@
             }
         }
     }
+    .boomer-story {
+        margin-top: 6rem;
+        padding: 6rem 0 0;
+        background-color: #f8f9fd;
+        border-top: 1px solid #eee;
+
+        &+.boomer-footer {
+            background-color: #f8f9fd;            
+        }
+        @media (max-width: 640px) {
+            margin-top: 3rem;
+            padding: 3rem 0 0;
+        }
+    }
 
     .boomer-footer {
-        margin-top: 24rem;
-        background-color: #203d87;
+        padding-top: 18rem;        
 
+        .inner {
+            padding: 0 2rem;
+            background-color: #203d87;
+        }
         .boomer-footer-tit {
-            padding: 3rem 0;
-            position: relative;
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            position: relative;            
             color: #fff;
             font-size: 2rem;
             font-weight: 500;
@@ -675,7 +694,7 @@
             }
         }
         @media (max-width: 640px) {
-            margin-top: 6rem;
+            padding-top: 6rem;
 
             .boomer-footer-tit {
                 padding: 1.5rem 0;

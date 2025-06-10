@@ -353,6 +353,13 @@ html, body {
   }
 }
 
+body[data-page=internship-consulting] .boomer-story {
+  display: none;
+}
+body[data-page=internship-consulting] .boomer-story + .boomer-footer {
+  background-color: #fff !important;
+}
+
 .accordion-container {
   display: flex;
   flex-direction: column;
@@ -360,7 +367,7 @@ html, body {
   width: 100%;
 }
 .accordion-container .accordion-tit {
-  margin: 6rem 0 2rem;
+  margin-bottom: 2rem;
   color: #333333;
   font-size: 2.6rem;
   text-align: center;
@@ -368,7 +375,6 @@ html, body {
 }
 @media (max-width: 640px) {
   .accordion-container .accordion-tit {
-    margin: 4rem 0 0;
     font-size: 1.5rem;
   }
 }
@@ -404,6 +410,7 @@ html, body {
   position: relative;
   padding: 4rem 0;
   padding-right: 4rem;
+  background-color: #fff;
   transition: all 0.35s ease;
   cursor: pointer;
 }
@@ -1704,12 +1711,32 @@ html.loaded #main .main-menu-wrap {
     font-size: 1.4rem;
   }
 }
+#boomer .boomer-story {
+  margin-top: 6rem;
+  padding: 6rem 0 0;
+  background-color: #f8f9fd;
+  border-top: 1px solid #eee;
+}
+#boomer .boomer-story + .boomer-footer {
+  background-color: #f8f9fd;
+}
+@media (max-width: 640px) {
+  #boomer .boomer-story {
+    margin-top: 3rem;
+    padding: 3rem 0 0;
+  }
+}
 #boomer .boomer-footer {
-  margin-top: 24rem;
+  padding-top: 18rem;
+}
+#boomer .boomer-footer .inner {
+  padding: 0 2rem;
   background-color: #203d87;
 }
 #boomer .boomer-footer .boomer-footer-tit {
-  padding: 3rem 0;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
   position: relative;
   color: #fff;
   font-size: 2rem;
@@ -1727,7 +1754,7 @@ html.loaded #main .main-menu-wrap {
 }
 @media (max-width: 640px) {
   #boomer .boomer-footer {
-    margin-top: 6rem;
+    padding-top: 6rem;
   }
   #boomer .boomer-footer .boomer-footer-tit {
     padding: 1.5rem 0;

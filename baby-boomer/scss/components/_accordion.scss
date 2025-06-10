@@ -5,6 +5,13 @@ $pages: (
     "internship-company",
     "internship-consulting"
 );
+body[data-page=internship-consulting] .boomer-story {
+  display: none;
+
+  &+.boomer-footer {
+    background-color: #fff !important;
+  }
+}
 .accordion-container {
     display: flex;
     flex-direction: column;
@@ -12,20 +19,19 @@ $pages: (
     width: 100%;
 
     .accordion-tit {
-        margin: 6rem 0 2rem;
+        margin-bottom: 2rem;
         color: #333333;
         font-size: 2.6rem;
         text-align: center;
         letter-spacing: -0.05rem;
 
         @media (max-width: 640px) {
-            margin: 4rem 0 0;
             font-size: 1.5rem;
         }
     }
     
 
-    .accordion-item {     
+    .accordion-item {
         padding: 0 4rem;
         color: #333333;
         font-size: 1.8rem;
@@ -35,7 +41,7 @@ $pages: (
         border-radius: 2rem;
 
         &.open {
-            .accordion-menu {
+            .accordion-menu {                
                 color: #58b1ed;
                 transition: all 0.35s ease;
                     
@@ -60,7 +66,8 @@ $pages: (
     .accordion-menu {
         position: relative;
         padding: 4rem 0;        
-        padding-right: 4rem;        
+        padding-right: 4rem;  
+        background-color: #fff;      
         transition: all 0.35s ease;
         cursor: pointer;
         
