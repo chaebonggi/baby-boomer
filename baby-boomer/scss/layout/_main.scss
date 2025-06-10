@@ -377,14 +377,20 @@
                         transform: none;
                     }
                 }
+                &:nth-child(1) .policy-info,
+                &:nth-child(2) .policy-info {
+                    min-height: 28.5rem;
+                }
                 > a {
                     display: block;
-                    min-height: 39.6rem;
+                    min-height: 34rem;
                     padding: 3rem 3.8rem 2.5rem;
                     position: relative;
                     background-color: #fff;
                     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
                     border-radius: 2rem;
+
+                   
                 }
 
                 .ptxt {
@@ -500,7 +506,7 @@
             }
             
             .policy-info-list {
-                margin: 4.8rem 0 1rem;
+                margin-top: 4.8rem;
 
                 > li {
                     padding-left: 1rem;
@@ -539,7 +545,6 @@
         }
 
         .policy-date {
-
             li {
                 display: flex;
                 align-items: flex-start;
@@ -678,6 +683,16 @@
 
             .main-policy-list {
                 grid-template-columns: 1fr;
+
+                > li {
+                    > a {
+                        min-height: auto;
+
+                        .policy-info {
+                            min-height: auto !important;
+                        }
+                    }
+                }
             }
 
             .main-policy-banner {

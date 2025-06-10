@@ -1119,9 +1119,12 @@ html.loaded #main .main-menu-wrap {
 #main .main-policy .main-policy-list > li.banner:hover {
   transform: none;
 }
+#main .main-policy .main-policy-list > li:nth-child(1) .policy-info, #main .main-policy .main-policy-list > li:nth-child(2) .policy-info {
+  min-height: 28.5rem;
+}
 #main .main-policy .main-policy-list > li > a {
   display: block;
-  min-height: 39.6rem;
+  min-height: 34rem;
   padding: 3rem 3.8rem 2.5rem;
   position: relative;
   background-color: #fff;
@@ -1217,7 +1220,7 @@ html.loaded #main .main-menu-wrap {
   font-style: normal;
 }
 #main .main-policy .policy-info .policy-info-list {
-  margin: 4.8rem 0 1rem;
+  margin-top: 4.8rem;
 }
 #main .main-policy .policy-info .policy-info-list > li {
   padding-left: 1rem;
@@ -1363,6 +1366,12 @@ html.loaded #main .main-menu-wrap {
 @media (max-width: 1024px) {
   #main .main-policy .main-policy-list {
     grid-template-columns: 1fr;
+  }
+  #main .main-policy .main-policy-list > li > a {
+    min-height: auto;
+  }
+  #main .main-policy .main-policy-list > li > a .policy-info {
+    min-height: auto !important;
   }
   #main .main-policy .main-policy-banner {
     flex-direction: column;
