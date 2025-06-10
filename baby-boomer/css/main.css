@@ -1869,7 +1869,6 @@ html.loaded #main .main-menu-wrap {
 }
 #footer .footer-bottom ul {
   margin-bottom: 1rem;
-  text-align: right;
 }
 #footer .footer-bottom ul a {
   color: #fff;
@@ -1915,9 +1914,6 @@ html.loaded #main .main-menu-wrap {
   #footer .footer-addr {
     margin-top: 2rem;
     font-size: 1.4rem;
-  }
-  #footer .footer-bottom ul {
-    text-align: center;
   }
   #footer .footer-bottom ul a {
     font-size: 1.2rem;
