@@ -43,6 +43,17 @@
         padding-top: 2rem;
         margin-top: 2rem;
         border-top: 1px solid #f7faff;
+
+        ul {
+            margin-bottom: 1rem;
+            text-align: right;
+
+            a {
+                color: #fff;
+                font-size: 1.4rem;
+                letter-spacing: -0.05rem;
+            }
+        }
     }
     .copyright {
         line-height: 1.3;
@@ -90,6 +101,14 @@
         .footer-addr {
             margin-top: 2rem;
             font-size: 1.4rem;
+        }
+        .footer-bottom {
+            ul {
+                text-align: center;
+                a {
+                    font-size: 1.2rem;
+                }
+            }
         }
         .copyright {
             font-size: 1.2rem;
