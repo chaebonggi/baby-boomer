@@ -353,6 +353,10 @@ html, body {
   }
 }
 
+.btn-link {
+  color: #58b1ed;
+}
+
 body[data-page=internship-consulting] .boomer-story {
   display: none;
 }
@@ -1098,6 +1102,21 @@ html.loaded #header {
 
 .mb10 {
   margin-bottom: 1rem;
+}
+
+.mb20 {
+  margin-bottom: 2rem;
+}
+
+.tct {
+  text-align: center;
+}
+
+.txt-box {
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
 }
 
 .fc-orange {

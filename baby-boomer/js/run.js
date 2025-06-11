@@ -201,6 +201,18 @@ $(document).ready(function() {
                 const $content = $item.find('.accordion-cont');
                 const isOpen = $item.hasClass('open');
 
+                // if (isOpen) {
+                //     // 닫기
+                //     $content.stop(true, true).slideUp();
+                //     $item.removeClass('open');
+                // } else {
+                //     // 다른 아이템 닫기
+                //     $items.removeClass('open').find('.accordion-cont').stop(true, true).slideUp();
+
+                //     // 현재 아이템 열기
+                //     $item.addClass('open');
+                //     $content.stop(true, true).slideDown();
+                // }
                 if (isOpen) {
                     // 닫기
                     $content.stop(true, true).slideUp();
@@ -212,7 +224,16 @@ $(document).ready(function() {
 
                     // 현재 아이템 열기
                     $item.addClass('open');
-                    $content.stop(true, true).slideDown();
+                    $content.stop(true, true).slideDown(function() {
+                        // 애니메이션 완료 후 스크롤 위치 조정 (필요한 경우만 추가)
+                        // 현재 열린 아코디언 아이템의 상단 위치로 스크롤
+                        // (type02와 일반형의 CSS 및 상위 요소 구조에 따라 미세 조정 필요)
+                        const offset = $item.offset().top; // 아코디언 아이템의 문서 상단으로부터의 거리
+                        const headerHeight = 150; // 고정된 헤더가 있다면 헤더 높이만큼 빼줌
+                        $('html, body').animate({
+                            scrollTop: offset - headerHeight
+                        }, 300);
+                    });
                 }
             });
         });
