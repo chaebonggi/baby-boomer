@@ -9,7 +9,7 @@ body[data-page=internship-consulting] .boomer-story {
   display: none;
 
   &+.boomer-footer {
-    background-color: #fff !important;
+    background: #fff !important;
   }
 }
 .accordion-container {
@@ -20,7 +20,7 @@ body[data-page=internship-consulting] .boomer-story {
 
     .accordion-tit {
         margin-bottom: 2rem;
-        color: #333333;
+        color: #fff;
         font-size: 2.6rem;
         text-align: center;
         letter-spacing: -0.05rem;
@@ -293,9 +293,10 @@ body[data-page=internship-consulting] .boomer-story {
     &.type02 {
         .accordion-item {
             display: none;
-            padding: 0;
-            border: none;
-            border-radius: initial;
+            background-color: #fff;            
+            border: 1px solid #e5e5e5;
+            border-radius: 2rem;
+            overflow: hidden;
             
             &[data-show-all="true"] {
                 display: block;
@@ -311,7 +312,7 @@ body[data-page=internship-consulting] .boomer-story {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                right: 4rem;
+                right: 0;
 
                 &::before {
                     content: '펼쳐보기';
@@ -327,6 +328,9 @@ body[data-page=internship-consulting] .boomer-story {
                 }
             }
             @media (max-width: 640px){
+                padding: 0 1rem;
+                border-radius: 1rem;
+
                 .accordion-menu {
                     strong {
                         display: block;
@@ -347,22 +351,21 @@ body[data-page=internship-consulting] .boomer-story {
             }
         }
         .accordion-menu {
-            padding: 4rem 1.5rem;        
-            padding-right: 12rem;        
-            border: 1px solid #e5e5e5;
-            border-radius: 2rem;
+            padding: 4rem 0;        
+            padding-right: 8rem;
+            
             
             @media (max-width: 640px) {
-                padding: 2rem 6.5rem 1.5rem 2rem;
+                padding: 2rem 0;
+                padding-right: 6rem;
                 border-radius: 1rem;
             }
         }
         .accordion-cont {
-            padding: 4rem 0;
-            border-top: none;
+            padding: 2rem 0 4rem;
 
             @media (max-width: 640px) {
-                padding: 2rem 0 0;
+                padding: 2rem 0;
             }
         }
     }
