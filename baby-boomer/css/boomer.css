@@ -547,6 +547,9 @@ body[data-page=internship-consulting] .boomer-story + .boomer-footer {
 .accordion-container .accordion-info-wrap .accordion-info-item .info-item-box.bg.bg-icon02 {
   background-image: url(../images/main/bg_icon02.png);
 }
+.accordion-container .accordion-info-wrap .accordion-info-item .info-item-box.bg.bg-icon03 {
+  background-image: url(../images/main/bg_icon03.png);
+}
 @media (max-width: 768px) {
   .accordion-container .accordion-info-wrap .accordion-info-item {
     flex-direction: column;
@@ -590,7 +593,7 @@ body[data-page=internship-consulting] .boomer-story + .boomer-footer {
   margin-bottom: 0.5rem;
 }
 .accordion-container .accordion-info-wrap .info-cont .info-tit02 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 500;
 }
 .accordion-container .accordion-info-wrap .info-cont .info-txt {
@@ -1132,6 +1135,14 @@ html.loaded #header {
 
 .fc-green {
   color: #218030 !important;
+}
+
+.fc-blue {
+  color: #3380c6 !important;
+}
+
+.fc-purple {
+  color: #4f4492 !important;
 }
 
 .container-lg {

@@ -88,6 +88,7 @@ $(document).ready(function() {
             },
             pagination: {
                 el: ".swiper-pagination",
+                type: "fraction"
             },
             breakpoints: {
                 768: {

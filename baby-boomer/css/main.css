@@ -793,6 +793,14 @@ html.loaded #header {
   color: #218030 !important;
 }
 
+.fc-blue {
+  color: #3380c6 !important;
+}
+
+.fc-purple {
+  color: #4f4492 !important;
+}
+
 .container-lg {
   max-width: 122rem;
   padding: 0 1rem;
@@ -1741,6 +1749,7 @@ html.loaded #main .main-menu-wrap {
     display: block;
     top: initial;
     bottom: 0;
+    font-size: 14px;
   }
 }
 #main .main-story .slide-wrap .swiper-slide > a {
