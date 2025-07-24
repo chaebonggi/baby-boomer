@@ -179,6 +179,15 @@ $(document).ready(function() {
 
     // 아코디언 메뉴
     $("#boomer-story").load("boomer-story.html", function () {
+        // ✅ 현재 파일 이름 알아내기
+        const pathname = window.location.pathname;
+        const filename = pathname.substring(pathname.lastIndexOf('/') + 1);
+
+        // ✅ 조건부로 타이틀 텍스트 변경
+        if (filename === 'internship_camp.html') {
+            $('#boomer-story .accordion-tit h2').text('참여자 사례');
+        }
+
         const params = new URLSearchParams(window.location.search);
         const targetIndex = parseInt(params.get('accordion'));
 
@@ -186,11 +195,9 @@ $(document).ready(function() {
             const $container = $(this);
             const $items = $container.find('.accordion-item');
 
-            // 모든 콘텐츠 초기 숨김 (JS로 제어)
             $items.find('.accordion-cont').hide();
             $items.removeClass('open');
 
-            // 파라미터로 해당 아코디언 열기
             if (!isNaN(targetIndex) && targetIndex > 0 && targetIndex <= $items.length) {
                 const $target = $items.eq(targetIndex - 1);
                 $target.addClass('open');
@@ -202,30 +209,15 @@ $(document).ready(function() {
                 const $content = $item.find('.accordion-cont');
                 const isOpen = $item.hasClass('open');
 
-                // if (isOpen) {
-                //     // 닫기
-                //     $content.stop(true, true).slideUp();
-                //     $item.removeClass('open');
-                // } else {
-                //     // 다른 아이템 닫기
-                //     $items.removeClass('open').find('.accordion-cont').stop(true, true).slideUp();
-
-                //     // 현재 아이템 열기
-                //     $item.addClass('open');
-                //     $content.stop(true, true).slideDown();
-                // }
                 if (isOpen) {
-                    // 닫기
                     $content.stop(true, true).slideUp();
                     $item.removeClass('open');
                 } else {
-                    // 다른 아이템 닫기
                     $items.removeClass('open')
                         .find('.accordion-cont').stop(true, true).slideUp();
 
-                    // 현재 아이템 열기
                     $item.addClass('open');
-                    $content.stop(true, true).slideDown(function() {
+                    $content.stop(true, true).slideDown(function () {
                         const offset = $item.offset().top;
                         const headerHeight = 150;
                         $('html, body').animate({
@@ -236,52 +228,6 @@ $(document).ready(function() {
             });
         });
     });
-
-    // $("#boomer-story").load("boomer-story.html", function () {
-    //     const params = new URLSearchParams(window.location.search);
-    //     const targetIndex = parseInt(params.get('accordion'));
-
-    //     $('.accordion-container').each(function () {
-    //         const $container = $(this);
-    //         const $items = $container.find('.accordion-item');
-
-    //         $items.find('.accordion-cont').hide();
-    //         $items.removeClass('open');
-
-    //         if (!isNaN(targetIndex) && targetIndex > 0 && targetIndex <= $items.length) {
-    //             const $target = $items.eq(targetIndex - 1);
-    //             $target.addClass('open');
-
-    //             $target.find('.accordion-cont').slideDown(function() {
-    //                 $('html, body').animate({
-    //                     scrollTop: $target.offset().top - 20
-    //                 }, 500);
-    //             });
-    //         }
-
-    //         $container.on('click', '.accordion-menu', function () {
-    //             const $item = $(this).closest('.accordion-item');
-    //             const $content = $item.find('.accordion-cont');
-    //             const isOpen = $item.hasClass('open');
-
-    //             if (isOpen) {
-    //                 $content.stop(true, true).slideUp();
-    //                 $item.removeClass('open');
-    //             } else {
-    //                 $items.removeClass('open')
-    //                     .find('.accordion-cont').stop(true, true).slideUp();
-
-    //                 $item.addClass('open');
-    //                 $content.stop(true, true).slideDown(function() {
-    //                     $('html, body').animate({
-    //                         scrollTop: $item.offset().top - 20
-    //                     }, 500);
-    //                 });
-    //             }
-    //         });
-    //     });
-    // });
-
 
     //앨범 swiper 
     let swiperInstance = null;
