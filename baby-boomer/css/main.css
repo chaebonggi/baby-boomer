@@ -774,6 +774,10 @@ html.loaded #header {
   text-align: center;
 }
 
+.trt {
+  text-align: right;
+}
+
 .txt-box {
   padding: 1rem;
   background-color: #f7f7f7;
@@ -799,6 +803,14 @@ html.loaded #header {
 
 .fc-purple {
   color: #4f4492 !important;
+}
+
+.fc-mint {
+  color: #06a6aa !important;
+}
+
+.fc-pink {
+  color: #d04c54 !important;
 }
 
 .container-lg {

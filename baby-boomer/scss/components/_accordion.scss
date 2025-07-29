@@ -231,12 +231,25 @@ body[data-page=internship-consulting] .boomer-story {
             overflow: hidden;
             order: 1;
 
+            &.none-oder {
+                order: initial;
+            }
             @media (max-width: 768px) {
                 width: 100%;
             }
             img {
                 margin: 0 auto;
                 width: 100%;
+            }
+            .img-txt {
+                color: #cdcdcd;
+                font-size: 1.4rem;
+            }
+            @media (max-width: 640px) {
+                .img-txt {
+                    font-size: 1rem;
+                    text-align: center;
+                }
             }
         }
         
