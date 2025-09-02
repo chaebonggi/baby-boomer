@@ -5,13 +5,13 @@ $pages: (
     "internship-company",
     "internship-consulting"
 );
-body[data-page=internship-consulting] .boomer-story {
-  display: none;
+// body[data-page=internship-consulting] .boomer-story {
+//   display: none;
 
-  &+.boomer-footer {
-    background: #fff !important;
-  }
-}
+//   &+.boomer-footer {
+//     background: #fff !important;
+//   }
+// }
 .accordion-container {
     display: flex;
     flex-direction: column;

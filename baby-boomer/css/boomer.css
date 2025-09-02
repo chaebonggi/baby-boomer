@@ -357,13 +357,6 @@ html, body {
   color: #58b1ed;
 }
 
-body[data-page=internship-consulting] .boomer-story {
-  display: none;
-}
-body[data-page=internship-consulting] .boomer-story + .boomer-footer {
-  background: #fff !important;
-}
-
 .accordion-container {
   display: flex;
   flex-direction: column;
