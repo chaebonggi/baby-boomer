@@ -277,8 +277,8 @@
                                                 </div> -->
                                             </div>                                           
                                         </div>
-                                        
-                                         <!-- <div class="en-detail">
+<!--                                         
+                                         <div class="en-detail">
                                             <div class="en-detail-img">
                                                 <img src="../images/main/encore_detail01.png" alt="지속가능한 중장년 일자리 혁신 콘퍼런스">
                                             </div>
@@ -368,22 +368,42 @@
         </footer>
         <script>
         $(document).ready(function() {
-            const $toggleButton = $(".en-detail-btn button");
-            const $detailImg = $(".en-detail-img");
+            const $toggleButtons = $(".en-detail-btn button");
 
-            $toggleButton.removeClass("is-open").html('상세정보 보기<i></i>');
+            $toggleButtons.removeClass("is-open").html('상세정보 보기<i></i>');
 
-            $toggleButton.on("click", function() {
+            $toggleButtons.on("click", function() {
                 const $this = $(this);
-
-                $detailImg.toggleClass("is-open");
-                $this.toggleClass("is-open");
+                const $parentItem = $this.closest('.en-item');
+                const $detailImg = $parentItem.find(".en-detail-img");
                 
-                if ($this.hasClass("is-open")) {
+                const isClosed = !$this.hasClass("is-open");
+
+
+                if (isClosed) {
+                    $detailImg.css('max-height', 'none'); 
+                    const autoHeight = $detailImg.get(0).scrollHeight; 
+                    
+                    $detailImg.css('max-height', 0); 
+                    
+                    setTimeout(function() {
+                        $detailImg.css('max-height', autoHeight + 'px');
+                    }, 10);
                     $this.html('상세정보 접기<i></i>');
+                    
                 } else {
+                    $detailImg.css('max-height', $detailImg.get(0).scrollHeight + 'px'); 
+                    
+                    setTimeout(function() {
+                        $detailImg.css('max-height', 0);
+                    }, 10); 
+                    $('html, body').animate({
+                        scrollTop: $parentItem.offset().top - 150 
+                    }, 400);
+
                     $this.html('상세정보 보기<i></i>');
                 }
+                $this.toggleClass("is-open");
             });
         });
         </script>
