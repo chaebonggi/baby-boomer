@@ -85,6 +85,48 @@
                 </div>
             </div>
         </header>
+         <style>
+            .encore-wrap { margin-top: 6rem; } 
+            .encore-wrap-list { padding: 80px; background-image: linear-gradient(160deg, #1455ca 0%, #24a584 100%); } 
+            .encore-wrap-list h3 img { margin: 0 auto; } 
+            .encore-wrap-list .en-cont { display: flex; flex-direction: column; gap: 6rem; padding-top: 6rem; } 
+            .encore-wrap-list .en-cont .en-item {scroll-margin-top: 150px;}
+            .encore-wrap-list .en-tit { display: flex; gap: 1.6rem; } 
+            .encore-wrap-list .en-tit span { position: relative; color: #fff; font-size: 2.8rem; font-weight: 800; } 
+            .encore-wrap-list .en-tit::after { display: inline-flex; content: ''; width: 100%; border-bottom: 2px solid #fff; } 
+            .encore-wrap-list .en-info { display: flex; gap: 3rem 6rem; padding: 6rem 6rem 3rem; } 
+            .encore-wrap-list .en-img { flex-shrink: 0; } 
+            .encore-wrap-list .en-text { width: 100%; padding-top: 4rem; } 
+            .encore-wrap-list .en-text-tit { margin-bottom: 4rem; padding: 1rem; background-color: #ffe400; color: #1455c9; font-size: 1.8rem; font-weight: bold; text-align: center; } 
+            .encore-wrap-list .en-text-subtxt { color: #fff; font-size: 1.8rem; font-weight: 400; } 
+            .encore-wrap-list .en-text-subtxt span { display: block; margin-top: 0.5rem; color: #ffe400; font-size: 2.4rem; font-weight: bold; line-height: 1.3;} 
+            .encore-wrap-list .en-text ul { display: flex; flex-direction: column; gap: 2rem; margin-top: 4rem; } 
+            .encore-wrap-list .en-text li { padding-left: 30px; position: relative; color: #fff; font-size: 1.8rem; font-weight: 300; line-height: 1.5; } 
+            .encore-wrap-list .en-text li::before { content: ''; width: 23px; height: 23px; position: absolute; top: 3px; left: 0; background: url(../images/main/encore_ico.png) center no-repeat; background-size: contain; } 
+            .encore-wrap-list .en-text .en-btn { margin-top: 5rem; } 
+            .encore-wrap-list .en-text .en-btn a { display: flex; align-items: center; justify-content: center; width: 150px; height: 40px; margin-left: auto; background-color: #fff; color: #1762be; font-size: 1.8rem; font-weight: 400; border-radius: 30px; } 
+            .encore-wrap-list .en-detail { padding: 0 6rem; } 
+            .encore-wrap-list .en-detail-img { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; } 
+            .encore-wrap-list .en-detail-img.is-open { max-height: 1500px; } 
+            .encore-wrap-list .en-detail-img img { width: 100%; } 
+            .encore-wrap-list .en-detail-btn { margin-top: 1rem; } 
+            .encore-wrap-list .en-detail-btn button { display: flex; align-items: center; justify-content: center; gap: 1rem;  margin: 0 auto;  padding: 1rem 2rem; color: #fff; font-size: 1.8rem; border-bottom: 1px solid #fff;} 
+            .encore-wrap-list .en-detail-btn button i { display: inline-flex; width: 13px; height: 8px; background: url(../images/main/encore_btn.png) center no-repeat; transform: rotate(180deg); } 
+            .encore-wrap-list .en-detail-btn button.is-open i { transform: rotate(0deg); } 
+            @media (max-width: 1024px){
+            .encore-wrap-list .en-info { flex-direction: column; padding: 3rem 0; } 
+            .encore-wrap-list .en-img { margin: 0 auto; } 
+            .encore-wrap-list .en-detail { padding: 0; } 
+            }
+            @media (max-width: 768px){
+            .encore-wrap-list { padding: 3rem 2rem; } 
+            .encore-wrap-list h3 img { max-width: 150px; } 
+            }
+            @media (max-width: 640px){
+            .encore-wrap-list .en-text .en-btn a { width: 100%; } 
+            }
+
+        </style>
         <main id="boomer">
             <section class="boomer-top">
                 <div class="inner">
@@ -111,11 +153,132 @@
             <section class="boomer-info">
                 <div class="inner container-lg">
                     <div class="boomer-info-wrap">
-                        <div class="info-list">
-                            <div class="info-list-item">
+                        <div class="encore-wrap">
+                            <div class="encore-wrap-poster">
                                 <picture><img src="../images/main/encore_poster.png" alt=""></picture>                                
                             </div>
-                            
+                           
+                            <div class="encore-wrap-list">
+                                <h3><img src="../images/main/encore_tit.png" alt="program"></h3>
+                                <ul class="en-cont">
+                                    <li class="en-item" id="en-link01">
+                                        <p class="en-tit"><span>10.23</span></p>
+                                        <div class="en-info">
+                                            <div class="en-img">
+                                                <picture><img src="../images/main/encore_img01.png" alt=""></picture>             
+                                            </div>
+                                            <div class="en-text">
+                                                <p class="en-text-tit">10.23 (목) 13:30 : 노보텔 앰버서더 수원 샴페인홀 </p>
+                                                <p class="en-text-subtxt">왜 계속 일해야 하는가 <span>지속 가능한 중장년 일자리 혁신 콘퍼런스</span></p>
+                                                <ul>
+                                                    <li>전문가들은 왜 일하는 중장년이 경제의 숨은 동력이라고 입을 모을까요?</li>
+                                                    <li>계속 일하려는 중장년을 위한 비전과 전략을 제시합니다.</li>
+                                                    <li>국내외 중장년 계속 고용 정책과 직무 재구조화 현장사례에 주목하세요.</li>
+                                                </ul>
+                                                <div class="en-btn">
+                                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsyL0a3goJY9ut60LHR_canrzQ3cJJCheqfNRspcVsm2N9vg/viewform">신청하기</a>
+                                                </div>
+                                            </div>                                           
+                                        </div>
+                                        
+                                         <div class="en-detail">
+                                            <div class="en-detail-img">
+                                                <img src="../images/main/encore_detail01.png" alt="지속가능한 중장년 일자리 혁신 콘퍼런스">
+                                            </div>
+                                            <div class="en-detail-btn">
+                                                <button>상세정보 보기<i></i></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="en-item" id="en-link02">
+                                        <p class="en-tit"><span>10.24</span></p>
+                                        <div class="en-info">
+                                            <div class="en-img">
+                                                <picture><img src="../images/main/encore_img.png" alt=""></picture>             
+                                            </div>
+                                            <div class="en-text">
+                                                <p class="en-text-tit">10.24 (금) 14:00 : 경기주택도시공사(GH) 대강당(2층)</p>
+                                                <p class="en-text-subtxt">사회 공헌의 놀라운 힘 <span>세상을 바꾸는 사회 공헌, 세·바·사</span></p>
+                                                <ul>
+                                                    <li>사회 공헌은 단순히 좋은 일이 아닙니다.</li>
+                                                    <li>사회 공헌의 놀라운 가치를 알려줄 명사 특강과 현장 이야기가 기다립니다.</li>
+                                                    <li>인생과 사회를 변화시킨 경기도 중장년의 생생한 경험담도 기대하세요. </li>
+                                                </ul>
+                                                <!-- <div class="en-btn">
+                                                    <a href="">신청하기</a>
+                                                </div> -->
+                                            </div>                                           
+                                        </div>
+                                        
+                                         <!-- <div class="en-detail">
+                                            <div class="en-detail-img">
+                                                <img src="../images/main/encore_detail01.png" alt="지속가능한 중장년 일자리 혁신 콘퍼런스">
+                                            </div>
+                                            <div class="en-detail-btn">
+                                                <button>상세정보 펄쳐보기<i></i></button>
+                                            </div>
+                                        </div> -->
+                                    </li>
+                                    <li class="en-item" id="en-link03">
+                                        <p class="en-tit"><span>10.27</span></p>
+                                        <div class="en-info">
+                                            <div class="en-img">
+                                                <picture><img src="../images/main/encore_img.png" alt=""></picture>             
+                                            </div>
+                                            <div class="en-text">
+                                                <p class="en-text-tit">10.27 (월) 14:00 : 경기주택도시공사(GH) 대강당(2층)</p>
+                                                <p class="en-text-subtxt">길을 찾는 모두를 위해 <span>최재천 교수의 희망 수업과 중장년 인생 토크</span></p>
+                                                <ul>
+                                                    <li>시대의 석학, 최재천 교수가 중장년의 삶과 관계 맺기를 위한 이정표를 제시합니다.</li>
+                                                    <li>같은 고민을 나눌 동료들과의 시간도 준비했습니다. </li>
+                                                    <li>혼자만 길을 잃었다고 느낀다면 함께 얘기해요.</li>
+                                                </ul>
+                                                <!-- <div class="en-btn">
+                                                    <a href="">신청하기</a>
+                                                </div> -->
+                                            </div>                                           
+                                        </div>
+                                        
+                                         <!-- <div class="en-detail">
+                                            <div class="en-detail-img">
+                                                <img src="../images/main/encore_detail01.png" alt="지속가능한 중장년 일자리 혁신 콘퍼런스">
+                                            </div>
+                                            <div class="en-detail-btn">
+                                                <button>상세정보 펄쳐보기<i></i></button>
+                                            </div>
+                                        </div> -->
+                                    </li>
+                                    <li class="en-item" id="en-link04">
+                                        <p class="en-tit"><span>10.28</span></p>
+                                        <div class="en-info">
+                                            <div class="en-img">
+                                                <picture><img src="../images/main/encore_img.png" alt=""></picture>             
+                                            </div>
+                                            <div class="en-text">
+                                                <p class="en-text-tit">10.28 (화) 14:00 : 경기도청 다산홀(1층)</p>
+                                                <p class="en-text-subtxt">중장년 갭이어 확산 포럼 <span>길어진 삶, 중장년에게 필요한 전환의 기술</span></p>
+                                                <ul>
+                                                    <li>갭이어는 잠시 일상을 멈추고 삶의 다음 단계를 준비하는 시간입니다.</li>
+                                                    <li>갭이어를 통해 중장년의 전환을 이야기하고,  그 중요성과 확산 전략을 함께 고민합니다. </li>
+                                                    <li>열정으로 가득찼던 경기도 중장년 갭이어 프로젝트, 인턴(人-Turn)캠프 참가자들의 여정이 공개됩니다.</li>
+                                                </ul>
+                                                <!-- <div class="en-btn">
+                                                    <a href="">신청하기</a>
+                                                </div> -->
+                                            </div>                                           
+                                        </div>
+                                        
+                                         <!-- <div class="en-detail">
+                                            <div class="en-detail-img">
+                                                <img src="../images/main/encore_detail01.png" alt="지속가능한 중장년 일자리 혁신 콘퍼런스">
+                                            </div>
+                                            <div class="en-detail-btn">
+                                                <button>상세정보 펄쳐보기<i></i></button>
+                                            </div>
+                                        </div> -->
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -193,7 +356,27 @@
                 </div>
             </div>
         </footer>
+        <script>
+        $(document).ready(function() {
+            const $toggleButton = $(".en-detail-btn button");
+            const $detailImg = $(".en-detail-img");
 
+            $toggleButton.removeClass("is-open").html('상세정보 보기<i></i>');
+
+            $toggleButton.on("click", function() {
+                const $this = $(this);
+
+                $detailImg.toggleClass("is-open");
+                $this.toggleClass("is-open");
+                
+                if ($this.hasClass("is-open")) {
+                    $this.html('상세정보 접기<i></i>');
+                } else {
+                    $this.html('상세정보 보기<i></i>');
+                }
+            });
+        });
+        </script>
     </div>
 </body>
 </html>
