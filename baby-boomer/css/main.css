@@ -1435,16 +1435,19 @@ html.loaded #main .main-menu-wrap {
   background-color: #e7f4e7;
   background-image: url(../images/main/banner_img02.png);
   background-position: bottom right 1rem;
+  pointer-events: none;
 }
 #main .main-policy .main-policy-banner .banner-item:nth-child(3) {
   background-color: #fed9bf;
   background-image: url(../images/main/banner_img03.png);
   background-position: bottom right 1rem;
+  pointer-events: none;
 }
 #main .main-policy .main-policy-banner .banner-item:nth-child(4) {
   background-color: #d7d3f4;
   background-image: url(../images/main/banner_img04.png);
   background-position: bottom right 1rem;
+  pointer-events: none;
 }
 #main .main-policy .main-policy-banner .banner-item > a {
   display: block;
