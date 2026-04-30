@@ -371,7 +371,7 @@
                 transition: all 0.35s ease;
                 
                 &.banner {
-                    background: url(../images/main/policy_banner02.png) bottom 5rem right no-repeat;
+                    background: url(../images/main/policy_banner02.png) bottom right no-repeat;
 
                     &:hover {
                         transform: none;
@@ -423,8 +423,8 @@
                 }
                 &:nth-child(3) {
                     .policy-info {
-                        background-image: url(../images/main/policy_img05.png);
-                        background-position: bottom 2.5rem right;
+                        background-image: url(../images/main/policy_img07.png);
+                        background-position: bottom right;
                     }
                 }
                 &:nth-child(4) {
@@ -434,8 +434,8 @@
                 }
                 &:nth-child(5) {
                     .policy-info {
-                        background-image: url(../images/main/policy_img06.png);
-                        background-position: bottom 2.5rem right;
+                        background-image: url(../images/main/policy_img08.png);
+                        background-position: bottom right;
                     }
                 }
             }
@@ -675,7 +675,8 @@
         }
 
         .main-policy-banner {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
             margin-top: 8rem;
 
@@ -691,6 +692,16 @@
                 &:nth-child(2) {
                     background-color: #e7f4e7;
                     background-image: url(../images/main/banner_img02.png);
+                    background-position: bottom right 1rem;
+                }
+                &:nth-child(3) {
+                    background-color: #fed9bf;
+                    background-image: url(../images/main/banner_img03.png);
+                    background-position: bottom right 1rem;
+                }
+                &:nth-child(4) {
+                    background-color: #d7d3f4;
+                    background-image: url(../images/main/banner_img04.png);
                     background-position: bottom right 1rem;
                 }
                 > a {
@@ -769,7 +780,7 @@
             }
 
             .main-policy-banner {
-                flex-direction: column;
+                grid-template-columns: 1fr;
             }
         }
     }
@@ -979,10 +990,7 @@
         .dv-table {
             display: grid;
             grid-template-columns: 13.5rem auto;
-
-            &:first-child {
-                border-bottom: 1px solid #ddd;
-            }
+            border-bottom: 1px solid #ddd;
 
             .dv-head {
                 display: flex;
@@ -1113,6 +1121,8 @@
                         text-align: center;
 
                         span {
+                            display: block;
+                            margin-top: 1rem;
                             font-weight: 300;
                         }
                     }
