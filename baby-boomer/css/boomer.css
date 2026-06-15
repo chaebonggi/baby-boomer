@@ -907,7 +907,6 @@ html.loaded #header {
   display: block;
   padding: 2rem 4rem;
   color: #222;
-  font-size: 2rem;
 }
 #header.open .gnb-2depth {
   position: static;
@@ -931,7 +930,7 @@ html.loaded #header {
 @media (max-width: 640px) {
   #header.open .gnb-1depth > a {
     padding: 1.5rem 2rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   #header.open .gnb-2depth {
     padding: 0 3rem 1.5rem;
@@ -1007,14 +1006,13 @@ html.loaded #header {
 #header .gnb-1depth {
   display: flex;
   align-items: center;
-  height: 10.4rem;
   position: relative;
 }
 #header .gnb-1depth > a {
-  padding: 0.5rem 2rem;
+  padding: 2rem 2rem;
   white-space: nowrap;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   letter-spacing: -0.1rem;
 }
 #header .gnb-1depth:hover ~ .gnb-2depth {
@@ -1483,6 +1481,7 @@ html.loaded #main .main-menu-wrap {
   border-radius: 50%;
 }
 #boomer .list-type > li li {
+  font-size: 1.6rem;
   font-weight: 300;
 }
 #boomer .list-type > li:not(:first-child) {

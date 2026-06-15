@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/boomer.css" type="text/css" rel="stylesheet" />
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/run.js"></script>
+    <title>중장년 행복센터</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header" class="main-header">
+            <div class="header-wrapper">
+                <div class="header-inner">
+                    <a href="./main.html" class="header-logo">
+                        <img src="../images/common/logo.png" alt="경기 베이비부머 포털" class="white">
+                        <img src="../images/common/logo_black.png" alt="경기 베이비부머 포털" class="black">
+                    </a>
+                    <nav id="gnb">
+                        <div class="gnb-list-wrap">
+                            <ul class="gnb-list">
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./light_job.html">
+                                            <span>라이트잡</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./internship_company.html">
+                                            <span>인턴십</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./social_contribution.html">
+                                            <span>활동</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./job-campus.html">
+                                            <span>일자리캠퍼스</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./expo.html">
+                                            <span>박람회</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./consulting.html">
+                                            <span>상담</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./happy_campus.html">
+                                            <span>행복캠퍼스</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./happy_center.html">
+                                            <span>행복센터</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./intern_camp.html">
+                                            <span>인턴캠프</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./internship_consulting.html">
+                                            <span>인턴십(컨설팅형)</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./internship_camp.html">
+                                            <span>인턴캠프</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./social_contribution.html">
+                                            <span>사회공헌활동지원</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="gnb-1depth">
+                                        <a href="./encore_week.html">
+                                            <span>앙코르위크</span>
+                                        </a>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="header-units-box">
+                        <ul class="header-units">
+                            <li>
+                                <a href="./main.html" class="btn"><i class="svg-icon ico-home right"></i>홈</a>
+                            </li>
+                            <li>
+                                <button type="button" class="btn bookmark"><i class="svg-icon ico-star right"></i>즐겨찾기 추가</button>
+                            </li>
+                            <li class="header-units-mobile">
+                                <button type="button" class="btn" id="mobileMenuBtn">
+                                    <i class="svg-icon ico-menu default"></i><span class="aria-hidden">모바일 메뉴</span>
+                                    <i class="svg-icon ico-close close"></i><span class="aria-hidden">메뉴 닫기</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="boomer">
+            <section class="boomer-top">
+                <div class="inner">
+                    <div class="boomer-top-wrap">
+                        <div class="boomer-img">
+                            <picture>
+                                <img src="../images/main/sub_page04_pc.png" alt="중장년 행복센터" class="img-pc">
+                                <img src="../images/main/sub_page04_mo.png" alt="중장년 행복센터" class="img-mo">
+                            </picture>
+                        </div>
+                        <div class="boomer-tit-wrap">
+                            <div class="boomer-tit container-lg">
+                                <h2 class="tit">중장년 행복센터</h2>
+                                <p class="txt">
+                                    경기도 31개 시군의 다양한 교육 프로그램을 통해<br> 도내 중장년 대상 맞춤형 역량강화 교육 지원
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="boomer-info mt40">
+                <div class="inner container-lg">
+                    <div class="boomer-info-wrap">
+                        <div class="info-list">
+                            <div class="info-list-item">
+                                <div class="info-tit">
+                                    <p>참여자격</p>
+                                </div>
+                                <div class="info-box">
+                                    <ul class="list-type">
+                                        <li>경기도에 주민등록을 둔 40세 이상 65세 미만 중장년</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info-list-item">
+                                <div class="info-tit">
+                                    <p>지원내용</p>
+                                </div>
+                                <div class="info-box">
+                                    <ul class="list-type">
+                                        <li>시군별 지역 인프라를 활용한 다양한 역량강화 교육프로그램을 제공하여 도내 중장년의 재도약과 사회참여 기회 지원</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info-list-item">
+                                <div class="info-tit">
+                                    <p>신청방법</p>
+                                </div>
+                                <div class="info-box">
+                                    <ul class="list-type">
+                                        <li>시군별 담당부서 문의</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info-list-item">
+                                <div class="info-tit">
+                                    <p>문의처</p>
+                                </div>
+                                <div class="info-box">
+                                    <ul class="list-type">
+                                        <li>시군별 연락처(<a href="javascript:void(0);" class="popup-trigger fc-blue" data-popup="happiness-center">바로보기</a>)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="boomer-footer">
+                <div class="inner">
+                    <div class="boomer-footer-tit">
+                        <p>중장년 행복센터</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="inner container-lg">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <ul class="footer-logo-list">
+                            <li>
+                                <a href="">
+                                    <img src="../images/common/footer_logo01.png" alt="변화의 중심 기회의 경기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../images/common/footer_logo02.png" alt="경기도일자리재단">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-util">
+                        <div class="footer-sns">
+                            <ul class="footer-sns-list">
+                                <li>
+                                    <a href="https://www.facebook.com/jobabanet" target="_blank">
+                                        <img src="../images/common/icon_face.png" alt="페이스북">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UC69DhLD0FUmLgP9BsxitbDw" target="_blank">
+                                        <img src="../images/common/icon_yt.png" alt="유튜브">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/jobabanet/" target="_blank">
+                                        <img src="../images/common/icon_ins.png" alt="인스타">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-addr">
+                            <p>재단법인 경기도일자리재단</p>
+                            <ul>
+                                <li>대표자 : 윤덕룡 |</li>
+                                <li>사업자등록번호 : 688-82-00072 |</li>
+                                <li>주소 : (14576) 경기도 부천시 부천로 143 KB증권빌딩(심곡동)</li>
+                            </ul>
+                            <ul>
+                                <li>전화 : 031-270-9941(라이트잡 운영센터) |</li>
+                                <li>팩스 : 031-270-9732</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <ul>
+                        <li>
+                            <a href="https://gjf.or.kr/main/guide/privacy_policy_main/view.do" target="_blank" title="개인정보처리방침 이동">개인정보 처리 방침</a>
+                        </li>
+                    </ul>
+                    <p class="copyright">© 2026 GYEONGGIDO JOB FOUNDATION ALL RIGHT RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 중장년 행복센터 팝업 -->
+        <div id="popup-happiness-center" class="baby-modal popup-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">중장년 행복센터</h2>
+                        <button type="button" class="close-modal" aria-label="닫기">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-scroll-wrapper">
+                            <p class="modal-intro">경기도 31개 시·군의 평생교육 담당 부서 연락처입니다. 지역별로 다양한 맞춤형 교육 프로그램을 제공하고 있습니다.</p>
+                            
+                            <div class="modal-table-wrapper">
+                                <table class="modal-table">
+                                    <thead>
+                                        <tr>
+                                            <th>시·군</th>
+                                            <th>담당 부서</th>
+                                            <th>연락처</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>가평군</td>
+                                            <td>평생교육사업소</td>
+                                            <td>031-580-4678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>고양시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-8075-2294</td>
+                                        </tr>
+                                        <tr>
+                                            <td>과천시</td>
+                                            <td>교육청소년과</td>
+                                            <td>02-3677-2932</td>
+                                        </tr>
+                                        <tr>
+                                            <td>광명시</td>
+                                            <td>평생학습원</td>
+                                            <td>02-2680-6629</td>
+                                        </tr>
+                                        <tr>
+                                            <td>광주시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-760-4826</td>
+                                        </tr>
+                                        <tr>
+                                            <td>구리시</td>
+                                            <td>평생학습과</td>
+                                            <td>031-550-8773</td>
+                                        </tr>
+                                        <tr>
+                                            <td>군포시</td>
+                                            <td>교육체육과</td>
+                                            <td>031-390-0787</td>
+                                        </tr>
+                                        <tr>
+                                            <td>김포시</td>
+                                            <td>교육청소년과</td>
+                                            <td>031-980-5152</td>
+                                        </tr>
+                                        <tr>
+                                            <td>남양주시</td>
+                                            <td>다산평생학습과</td>
+                                            <td>031-590-2582</td>
+                                        </tr>
+                                        <tr>
+                                            <td>동두천시</td>
+                                            <td>미래교육진흥원</td>
+                                            <td>031-860-3323</td>
+                                        </tr>
+                                        <tr>
+                                            <td>부천시</td>
+                                            <td>평생교육과</td>
+                                            <td>032-625-8484</td>
+                                        </tr>
+                                        <tr>
+                                            <td>성남시</td>
+                                            <td>미래교육과</td>
+                                            <td>031-729-3082</td>
+                                        </tr>
+                                        <tr>
+                                            <td>수원시</td>
+                                            <td>평생학습과</td>
+                                            <td>031-5191-3061</td>
+                                        </tr>
+                                        <tr>
+                                            <td>시흥시</td>
+                                            <td>평생학습과</td>
+                                            <td>031-310-2521</td>
+                                        </tr>
+                                        <tr>
+                                            <td>안산시</td>
+                                            <td>평생학습과</td>
+                                            <td>031-481-2768</td>
+                                        </tr>
+                                        <tr>
+                                            <td>안성시</td>
+                                            <td>체육평생학습과</td>
+                                            <td>031-678-6842</td>
+                                        </tr>
+                                        <tr>
+                                            <td>안양시</td>
+                                            <td>고용노동과</td>
+                                            <td>031-8045-2397</td>
+                                        </tr>
+                                        <tr>
+                                            <td>양주시</td>
+                                            <td>미래교육과</td>
+                                            <td>031-8082-7394</td>
+                                        </tr>
+                                        <tr>
+                                            <td>양평군</td>
+                                            <td>평생학습과</td>
+                                            <td>031-770-2922</td>
+                                        </tr>
+                                        <tr>
+                                            <td>여주시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-887-3326</td>
+                                        </tr>
+                                        <tr>
+                                            <td>연천군</td>
+                                            <td>통일평생교육원</td>
+                                            <td>031-839-4442</td>
+                                        </tr>
+                                        <tr>
+                                            <td>오산시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-8036-7834</td>
+                                        </tr>
+                                        <tr>
+                                            <td>용인시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-6193-2285</td>
+                                        </tr>
+                                        <tr>
+                                            <td>의왕시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-345-2565</td>
+                                        </tr>
+                                        <tr>
+                                            <td>의정부시</td>
+                                            <td>교육청소년과</td>
+                                            <td>031-828-2424</td>
+                                        </tr>
+                                        <tr>
+                                            <td>이천시</td>
+                                            <td>시민교육지원과</td>
+                                            <td>031-644-4332</td>
+                                        </tr>
+                                        <tr>
+                                            <td>파주시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-940-5923</td>
+                                        </tr>
+                                        <tr>
+                                            <td>평택시</td>
+                                            <td>평생학습과</td>
+                                            <td>031-8024-2727</td>
+                                        </tr>
+                                        <tr>
+                                            <td>포천시</td>
+                                            <td>교육정책과</td>
+                                            <td>031-538-3035</td>
+                                        </tr>
+                                        <tr>
+                                            <td>하남시</td>
+                                            <td>평생교육과</td>
+                                            <td>031-790-6043</td>
+                                        </tr>
+                                        <tr>
+                                            <td>화성시</td>
+                                            <td>평생학습과</td>
+                                            <td>031-5189-3440</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-close-modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* 팝업 모달 기본 스타일 */
+            .popup-modal { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; visibility: hidden; width: 100%; height: 100%; opacity: 0; background-color: rgba(0, 0, 0, 0.5); transition: opacity 0.3s ease, visibility 0.3s ease; font-size: 1.6rem; font-style: normal; font-weight: 400; line-height: 1.5; text-align: left; text-decoration: none; text-shadow: none; } 
+            .popup-modal.show { display: block; z-index: 2000; opacity: 1; visibility: visible; } 
+            .popup-modal .modal-dialog { display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; z-index: 2001; width: calc(100% - 2rem); max-width: 700px; height: 100%; margin: 0 auto; } 
+
+            .popup-modal .modal-content { display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; margin: 0 auto; position: relative; width: 100%; background-color: #fff; border-radius: 1.6rem; box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15); overflow: hidden; max-height: 85vh; display: flex; flex-direction: column; } 
+
+            /* 모달 헤더 */
+            .popup-modal .modal-header { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 2rem; border-bottom: 1px solid #e0e0e0; background-color: #f8f9fa; } 
+            .popup-modal .modal-title { margin: 0; color: #202870; font-size: 2.4rem; font-weight: 600; letter-spacing: -0.05rem; } 
+            .popup-modal .close-modal { background: none; border: none; font-size: 3rem; color: #999; cursor: pointer; padding: 0; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s ease; } 
+            .popup-modal .close-modal:hover { color: #333; } 
+            /* 모달 바디 */
+            .popup-modal .modal-body { flex: 1; width: 100%; padding: 2rem; overflow-y: auto; } 
+            .modal-scroll-wrapper { width: 100%; } 
+
+            /* 모달 소개 텍스트 */
+            .modal-intro { margin: 0 0 2rem 0; color: #555; font-size: 1.5rem; line-height: 1.6; padding: 1.5rem; background-color: #f0f7ff; border-left: 4px solid #32a2f1; border-radius: 0.5rem; } 
+            /* 테이블 스타일 */
+            .modal-table-wrapper { width: 100%; overflow-x: auto; margin-top: 1.5rem; } 
+            .modal-table { width: 100%; border-collapse: collapse; font-size: 1.4rem; } 
+            .modal-table thead { background-color: #f3970f; color: #fff; } 
+            .modal-table th { padding: 1.2rem; text-align: center; font-weight: 600; border: 1px solid #f3970f; } 
+            .modal-table td { padding: 1rem 1.2rem; border: 1px solid #e0e0e0; color: #333; text-align: center;} 
+            .modal-table tbody tr:nth-child(even) { background-color: #fafafa; } 
+            .modal-table tbody tr:hover { background-color: #f5f5f5; } 
+            /* 조직 리스트 스타일 */
+            .modal-org-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; } 
+            .org-item { padding: 1.5rem; border: 1px solid #e0e0e0; border-radius: 1rem; background-color: #fafafa; transition: all 0.2s ease; } 
+            .org-item:hover { border-color: #f3970f; background-color: #fff; box-shadow: 0px 2px 8px 0px rgba(243, 151, 15, 0.1); } 
+            .org-name { margin: 0 0 0.5rem 0; color: #202870; font-size: 1.6rem; font-weight: 600; } 
+            .org-desc { margin: 0 0 1rem 0; color: #666; font-size: 1.3rem; line-height: 1.5; } 
+            .org-link { display: inline-flex; align-items: center; gap: 0.5rem; color: #32a2f1; font-size: 1.3rem; text-decoration: none; word-break: break-all; transition: color 0.2s ease; } 
+            .org-link:hover { color: #0066cc; text-decoration: underline; } 
+            .link-icon { flex-shrink: 0; font-size: 1.2rem; } 
+            /* 모달 노트 */
+            .modal-note { margin-top: 2rem; padding: 1.5rem; background-color: #fff3e0; border-left: 4px solid #f3970f; border-radius: 0.5rem; font-size: 1.4rem; line-height: 1.6; } 
+            .modal-note p { margin: 0 0 0.8rem 0; color: #333; } 
+            .modal-note p:last-child { margin-bottom: 0; } 
+            .modal-note strong { color: #202870; font-weight: 600; } 
+            .modal-note ul { margin: 0.8rem 0 0 1.5rem; padding: 0; list-style: disc; } 
+            .modal-note ul li { margin: 0.5rem 0; color: #333; } 
+            /* 모달 푸터 */
+            .popup-modal .modal-footer { width: 100%; padding: 1.5rem 2rem; border-top: 1px solid #e0e0e0; background-color: #f8f9fa; text-align: right; } 
+            .btn-close-modal { padding: 0.8rem 2.4rem; background-color: #32a2f1; color: #fff; border: none; border-radius: 0.5rem; font-size: 1.5rem; font-weight: 500; cursor: pointer; transition: background-color 0.2s ease; } 
+            .btn-close-modal:hover { background-color: #0066cc; } 
+            .btn-close-modal:active { background-color: #004a99; } 
+            /* 팝업 트리거 링크 스타일 */
+            .popup-trigger { cursor: pointer !important; } 
+
+            .popup-trigger:hover { text-decoration: none; } 
+
+            /* 반응형 스타일 */
+            @media (max-width: 768px){
+            .popup-modal .modal-dialog { width: calc(100% - 1rem); max-width: 100%; max-height: 90vh; } 
+            .popup-modal .modal-content { border-radius: 1rem; } 
+            .popup-modal .modal-header { padding: 1.5rem; } 
+            .popup-modal .modal-title { font-size: 2rem; } 
+            .popup-modal .close-modal { font-size: 2.4rem; width: 2.4rem; height: 2.4rem; } 
+            .popup-modal .modal-body { padding: 1.5rem; } 
+            .modal-intro { font-size: 1.4rem; padding: 1rem; } 
+            .modal-table { font-size: 1.3rem; } 
+            .modal-table th,
+            .modal-table td { padding: 0.8rem; } 
+            .org-item { padding: 1rem; } 
+            .org-name { font-size: 1.5rem; } 
+            .org-desc { font-size: 1.2rem; } 
+            .org-link { font-size: 1.2rem; } 
+            .modal-note { font-size: 1.3rem; padding: 1rem; } 
+            .popup-modal .modal-footer { padding: 1rem 1.5rem; } 
+            .btn-close-modal { width: 100%; padding: 0.8rem 1.5rem; } 
+            }
+
+            @media (max-width: 480px){
+            .popup-modal .modal-dialog { width: calc(100% - 0.5rem); } 
+            .popup-modal .modal-header { padding: 1rem; } 
+            .popup-modal .modal-title { font-size: 1.8rem; } 
+            .popup-modal .modal-body { padding: 1rem; } 
+            .modal-table { font-size: 1.2rem; } 
+            .modal-table th,
+            .modal-table td { padding: 0.6rem; } 
+            .org-name { font-size: 1.4rem; } 
+            .org-link { font-size: 1.1rem; } 
+            }
+        </style>
+        <script>
+            /* ==================== 팝업 모달 기능 ==================== */
+
+            $(function() {
+                // 팝업 트리거 클릭 이벤트
+                $('.popup-trigger').on('click', function(e) {
+                    e.preventDefault();
+                    
+                    var popupType = $(this).data('popup');
+                    var $modal = $('#popup-' + popupType);
+                    
+                    if ($modal.length) {
+                        openModal($modal);
+                    }
+                });
+
+                // 모달 열기 함수
+                function openModal($modal) {
+                    $modal.addClass('show');
+                    $('body').css('overflow', 'hidden');
+                }
+
+                // 모달 닫기 함수
+                function closeModal($modal) {
+                    $modal.removeClass('show');
+                    $('body').css('overflow', '');
+                }
+
+                // 닫기 버튼 클릭 이벤트
+                $('.close-modal, .btn-close-modal').on('click', function() {
+                    var $modal = $(this).closest('.popup-modal');
+                    closeModal($modal);
+                });
+
+                // 모달 배경 클릭 이벤트 (모달 외부 클릭 시 닫기)
+                $('.popup-modal').on('click', function(e) {
+                    if ($(e.target).is(this)) {
+                        closeModal($(this));
+                    }
+                });
+
+                // ESC 키로 모달 닫기
+                $(document).on('keydown', function(e) {
+                    if (e.keyCode === 27) { // ESC 키
+                        var $openModal = $('.popup-modal.show');
+                        if ($openModal.length) {
+                            closeModal($openModal);
+                        }
+                    }
+                });
+
+                // 모달 내 링크 클릭 시 새 탭에서 열기 (이미 target="_blank" 설정되어 있음)
+                // 추가 처리 불필요
+
+                // 모달 스크롤 시 body 스크롤 방지
+                $('.popup-modal .modal-body').on('wheel', function(e) {
+                    var $scrollable = $(this);
+                    var scrollTop = $scrollable.scrollTop();
+                    var scrollHeight = $scrollable[0].scrollHeight;
+                    var clientHeight = $scrollable.height();
+
+                    if ((scrollTop === 0 && e.originalEvent.deltaY < 0) ||
+                        (scrollTop + clientHeight === scrollHeight && e.originalEvent.deltaY > 0)) {
+                        e.preventDefault();
+                    }
+                });
+            });
+
+            // 모달 외부 클릭 시 닫기 (터치 환경 대응)
+            document.addEventListener('click', function(e) {
+                var modals = document.querySelectorAll('.popup-modal.show');
+                modals.forEach(function(modal) {
+                    if (e.target === modal) {
+                        modal.classList.remove('show');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

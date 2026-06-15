@@ -554,7 +554,6 @@ html.loaded #header {
   display: block;
   padding: 2rem 4rem;
   color: #222;
-  font-size: 2rem;
 }
 #header.open .gnb-2depth {
   position: static;
@@ -578,7 +577,7 @@ html.loaded #header {
 @media (max-width: 640px) {
   #header.open .gnb-1depth > a {
     padding: 1.5rem 2rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   #header.open .gnb-2depth {
     padding: 0 3rem 1.5rem;
@@ -654,14 +653,13 @@ html.loaded #header {
 #header .gnb-1depth {
   display: flex;
   align-items: center;
-  height: 10.4rem;
   position: relative;
 }
 #header .gnb-1depth > a {
-  padding: 0.5rem 2rem;
+  padding: 2rem 2rem;
   white-space: nowrap;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   letter-spacing: -0.1rem;
 }
 #header .gnb-1depth:hover ~ .gnb-2depth {
@@ -1152,7 +1150,7 @@ html.loaded #main .main-menu-wrap {
   }
 }
 #main .main-policy {
-  padding-top: 19rem;
+  padding-top: 10rem;
 }
 #main .main-policy .main-policy-wrap {
   margin-top: 6rem;
@@ -1206,7 +1204,7 @@ html.loaded #main .main-menu-wrap {
   background-image: url(../images/main/policy_img02.png);
 }
 #main .main-policy .main-policy-list > li:nth-child(3) .policy-info {
-  background-image: url(../images/main/policy_img07.png);
+  background-image: url(../images/main/banner_img04.png);
   background-position: bottom right;
 }
 #main .main-policy .main-policy-list > li:nth-child(4) .policy-info {
