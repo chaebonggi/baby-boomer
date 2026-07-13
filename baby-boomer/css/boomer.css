@@ -601,6 +601,13 @@ html, body {
   display: block;
   margin-bottom: 0.5rem;
 }
+.accordion-container .accordion-info-wrap .info-cont .info-tit.ib {
+  margin-bottom: 0.5rem;
+}
+.accordion-container .accordion-info-wrap .info-cont .info-tit.ib .info-tit-tag {
+  display: inline-block;
+  margin-bottom: 0;
+}
 .accordion-container .accordion-info-wrap .info-cont .info-tit02 {
   font-size: 2.6rem;
   font-weight: 500;

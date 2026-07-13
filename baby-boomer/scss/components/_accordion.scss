@@ -276,6 +276,14 @@ $pages: (
                     display: block;
                     margin-bottom: 0.5rem;
                 }
+                &.ib {
+                    margin-bottom: 0.5rem;
+
+                    .info-tit-tag {
+                        display: inline-block;
+                        margin-bottom: 0;
+                    }
+                }
             }
             .info-tit02 {
                 font-size: 2.6rem;
