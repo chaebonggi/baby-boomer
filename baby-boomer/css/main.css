@@ -769,6 +769,10 @@ html.loaded #header {
   margin-bottom: 2rem;
 }
 
+.pt40 {
+  padding-top: 4rem;
+}
+
 .tct {
   text-align: center;
 }
@@ -822,6 +826,10 @@ html.loaded #header {
 
 .fc-pink {
   color: #d04c54 !important;
+}
+
+.top-line {
+  border-top: 1px dotted #a3a3a3;
 }
 
 .container-lg {
