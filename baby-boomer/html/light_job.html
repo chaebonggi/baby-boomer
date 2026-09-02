@@ -873,7 +873,69 @@
                 </div>
             </div>
         </footer>
-
+        
+        <!-- 라이트잡 공지 팝업 모달 -->
+        <style>
+            .popup-modal { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; visibility: hidden; width: 100%; height: 100%; opacity: 0; background-color: rgba(0, 0, 0, 0.6); transition: opacity 0.3s ease, visibility 0.3s ease; }
+            .popup-modal.show { display: block; z-index: 2000; opacity: 1; visibility: visible; }
+            .popup-modal .modal-dialog { display: flex; align-items: center; justify-content: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2001; padding: 2rem; box-sizing: border-box; }
+            .notice-img-modal { width: 100%; max-width: 520px; border-radius: 1.6rem; overflow: hidden; box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.35); }
+            .notice-img-wrap { width: 100%; background-color: #ffffff; line-height: 0; }
+            .notice-img-wrap img { width: 100%; height: auto; display: block; }
+            .notice-footer { display: flex; justify-content: center; align-items: center; padding: 1.2rem 2rem; background-color: #111e38; }
+            .btn-close-notice { min-width: 12rem; padding: 0.8rem 2.4rem; background-color: #24355a; color: #ffffff; font-size: 1.4rem; font-weight: 500; border-radius: 0.6rem; transition: background-color 0.2s; cursor: pointer; text-align: center; }
+            .btn-close-notice:hover { background-color: #384f82; }
+            @media (max-width: 640px) {
+            .notice-img-modal { border-radius: 1.2rem; }
+            .notice-footer { padding: 1rem 1.5rem; }
+            .btn-close-notice { font-size: 1.3rem; padding: 0.7rem 1.2rem; }
+            }
+        </style>
+        <div id="popup-notice-lightjob" class="baby-modal popup-modal">
+            <div class="modal-dialog">
+                <div class="modal-content notice-img-modal">
+                    <!-- 이미지 영역 -->
+                    <div class="notice-img-wrap">
+                        <img src="../images/main/pop_img.png" alt="2026년 베이비부머 라이트잡 지원금 신청 자격 변경 안내: 2026년 9월 2일(수) 이후 채용된 신규 근로자부터는 본 사업의 신청이 불가합니다.">
+                    </div>
+                    
+                    <!-- 팝업 컨트롤 푸터 -->
+                    <div class="notice-footer">
+                        <button type="button" class="btn-close-notice" aria-label="팝업 닫기">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
+    <script>
+        $(document).ready(function() {
+            const $popup = $('#popup-notice-lightjob');
+
+            // 페이지 접속 시 즉시 팝업 표시
+            $popup.addClass('show');
+            $('body').css('overflow', 'hidden');
+
+            function closeNoticePopup() {
+                $popup.removeClass('show');
+                $('body').css('overflow', '');
+            }
+
+            // 닫기 버튼 및 배경 클릭 시 닫기
+            $popup.find('.btn-close-notice').on('click', closeNoticePopup);
+            $popup.on('click', function(e) {
+                if ($(e.target).is(this)) {
+                    closeNoticePopup();
+                }
+            });
+
+            // ESC 키 입력 시 닫기
+            $(document).on('keydown', function(e) {
+                if (e.keyCode === 27 && $popup.hasClass('show')) {
+                    closeNoticePopup();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
