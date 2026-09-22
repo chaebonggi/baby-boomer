@@ -1522,6 +1522,22 @@
                 </div>
             </div>
         </div>
+
+        <!-- 포럼 안내 공지 팝업 (10월 1일까지 노출) -->
+        <div id="popup-notice-forum" class="baby-modal popup-modal">
+            <div class="modal-dialog">
+                <div class="modal-content notice-img-modal">
+                    <!-- 포스터 이미지 영역 (스크롤 가능) -->
+                    <div class="notice-img-wrap">
+                        <img src="../images/main/pop_poster.jpg" alt="중장년과 기업의 미래 고용 포럼 - 지속가능한 내일, 같이 만드는 일자리">
+                    </div>
+                    <!-- 닫기 버튼 푸터 -->
+                    <div class="notice-footer">
+                        <button type="button" class="btn-close-notice" aria-label="팝업 닫기">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- modal -->
         <style>            
@@ -1551,25 +1567,17 @@
             .policy-list li a { height: 40px; font-size: 1.3rem; } 
             .group-label { font-size: 1.3rem; } 
             }
-            /* 팝업 모달 기본 스타일 */
             .popup-modal { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; visibility: hidden; width: 100%; height: 100%; opacity: 0; background-color: rgba(0, 0, 0, 0.5); transition: opacity 0.3s ease, visibility 0.3s ease; font-size: 1.6rem; font-style: normal; font-weight: 400; line-height: 1.5; text-align: left; text-decoration: none; text-shadow: none; } 
             .popup-modal.show { display: block; z-index: 2000; opacity: 1; visibility: visible; } 
-            .popup-modal .modal-dialog { display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; z-index: 2001; width: calc(100% - 2rem); max-width: 700px; height: 100%; margin: 0 auto; } 
-
+            .popup-modal .modal-dialog { display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; z-index: 2001; width: calc(100% - 2rem); max-width: 700px; height: 100%; margin: 0 auto; }
             .popup-modal .modal-content { display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; margin: 0 auto; position: relative; width: 100%; background-color: #fff; border-radius: 1.6rem; box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15); overflow: hidden; max-height: 85vh; display: flex; flex-direction: column; } 
-
-            /* 모달 헤더 */
             .popup-modal .modal-header { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 2rem; border-bottom: 1px solid #e0e0e0; background-color: #f8f9fa; } 
             .popup-modal .modal-title { margin: 0; color: #202870; font-size: 2.4rem; font-weight: 600; letter-spacing: -0.05rem; } 
             .popup-modal .close-modal { background: none; border: none; font-size: 3rem; color: #999; cursor: pointer; padding: 0; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; transition: color 0.2s ease; } 
             .popup-modal .close-modal:hover { color: #333; } 
-            /* 모달 바디 */
             .popup-modal .modal-body { flex: 1; width: 100%; padding: 2rem; overflow-y: auto; } 
             .modal-scroll-wrapper { width: 100%; } 
-
-            /* 모달 소개 텍스트 */
             .modal-intro { margin: 0 0 2rem 0; color: #555; font-size: 1.5rem; line-height: 1.6; padding: 1.5rem; background-color: #f0f7ff; border-left: 4px solid #32a2f1; border-radius: 0.5rem; } 
-            /* 테이블 스타일 */
             .modal-table-wrapper { width: 100%; overflow-x: auto; margin-top: 1.5rem; } 
             .modal-table { width: 100%; border-collapse: collapse; font-size: 1.4rem; } 
             .modal-table thead { background-color: #f3970f; color: #fff; } 
@@ -1577,7 +1585,6 @@
             .modal-table td { padding: 1rem 1.2rem; border: 1px solid #e0e0e0; color: #333; text-align: center;} 
             .modal-table tbody tr:nth-child(even) { background-color: #fafafa; } 
             .modal-table tbody tr:hover { background-color: #f5f5f5; } 
-            /* 조직 리스트 스타일 */
             .modal-org-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; } 
             .org-item { padding: 1.5rem; border: 1px solid #e0e0e0; border-radius: 1rem; background-color: #fafafa; transition: all 0.2s ease; } 
             .org-item:hover { border-color: #f3970f; background-color: #fff; box-shadow: 0px 2px 8px 0px rgba(243, 151, 15, 0.1); } 
@@ -1586,24 +1593,18 @@
             .org-link { display: inline-flex; align-items: center; gap: 0.5rem; color: #32a2f1; font-size: 1.3rem; text-decoration: none; word-break: break-all; transition: color 0.2s ease; } 
             .org-link:hover { color: #0066cc; text-decoration: underline; } 
             .link-icon { flex-shrink: 0; font-size: 1.2rem; } 
-            /* 모달 노트 */
             .modal-note { margin-top: 2rem; padding: 1.5rem; background-color: #fff3e0; border-left: 4px solid #f3970f; border-radius: 0.5rem; font-size: 1.4rem; line-height: 1.6; } 
             .modal-note p { margin: 0 0 0.8rem 0; color: #333; } 
             .modal-note p:last-child { margin-bottom: 0; } 
             .modal-note strong { color: #202870; font-weight: 600; } 
             .modal-note ul { margin: 0.8rem 0 0 1.5rem; padding: 0; list-style: disc; } 
             .modal-note ul li { margin: 0.5rem 0; color: #333; } 
-            /* 모달 푸터 */
             .popup-modal .modal-footer { width: 100%; padding: 1.5rem 2rem; border-top: 1px solid #e0e0e0; background-color: #f8f9fa; text-align: right; } 
             .btn-close-modal { padding: 0.8rem 2.4rem; background-color: #32a2f1; color: #fff; border: none; border-radius: 0.5rem; font-size: 1.5rem; font-weight: 500; cursor: pointer; transition: background-color 0.2s ease; } 
             .btn-close-modal:hover { background-color: #0066cc; } 
             .btn-close-modal:active { background-color: #004a99; } 
-            /* 팝업 트리거 링크 스타일 */
             .popup-trigger { cursor: pointer !important; } 
-
             .popup-trigger:hover { text-decoration: none; } 
-
-            /* 반응형 스타일 */
             @media (max-width: 768px){
             .popup-modal .modal-dialog { width: calc(100% - 1rem); max-width: 100%; max-height: 90vh; } 
             .popup-modal .modal-content { border-radius: 1rem; } 
@@ -1623,7 +1624,6 @@
             .popup-modal .modal-footer { padding: 1rem 1.5rem; } 
             .btn-close-modal { width: 100%; padding: 0.8rem 1.5rem; } 
             }
-
             @media (max-width: 480px){
             .popup-modal .modal-dialog { width: calc(100% - 0.5rem); } 
             .popup-modal .modal-header { padding: 1rem; } 
@@ -1634,6 +1634,18 @@
             .modal-table td { padding: 0.6rem; } 
             .org-name { font-size: 1.4rem; } 
             .org-link { font-size: 1.1rem; } 
+            }
+            /* 포스터 팝업 */
+            .popup-modal .notice-img-modal { display:flex; flex-direction:column; width:100%; max-width:480px; max-height:90vh; border-radius:1.6rem; overflow:hidden; box-shadow:0 1rem 3rem rgba(0,0,0,0.35); background-color:#ffffff; }
+            .popup-modal .notice-img-wrap { flex:1 1 auto; width:100%; overflow-y:auto; -webkit-overflow-scrolling:touch; background-color:#ffffff; line-height:0; }
+            .popup-modal .notice-img-wrap img { width:100%; height:auto; display:block; }
+            .popup-modal .notice-footer { flex-shrink:0; display:flex; justify-content:center; align-items:center; width:100%; height:auto; min-height:5.2rem; padding:1rem 2rem; background-color:#111e38; box-sizing:border-box; border:none; margin:0; }
+            .popup-modal .btn-close-notice { display:inline-flex; align-items:center; justify-content:center; width:auto; min-width:12rem; height:3.6rem; padding:0 2.4rem; background-color:#24355a; color:#ffffff; font-size:1.4rem; font-weight:500; line-height:1; border-radius:0.6rem; border:none; outline:none; transition:background-color 0.2s; cursor:pointer; text-align:center; box-sizing:border-box; margin:0; }
+            .popup-modal .btn-close-notice:hover { background-color:#384f82; }
+            @media (max-width:640px), (max-height:700px) {
+            .popup-modal .notice-img-modal { border-radius:1.2rem; max-height:92vh; }
+            .popup-modal .notice-footer { padding:0.8rem 1.5rem; min-height:4.8rem; }
+            .popup-modal .btn-close-notice { font-size:1.3rem; height:3.2rem; min-width:10rem; padding:0 1.5rem; }
             }
 
         </style>
@@ -1655,7 +1667,6 @@
             /* ==================== 팝업 모달 기능 ==================== */
 
             $(function() {
-                // 팝업 트리거 클릭 이벤트
                 $('.popup-trigger').on('click', function(e) {
                     e.preventDefault();
                     
@@ -1666,33 +1677,23 @@
                         openModal($modal);
                     }
                 });
-
-                // 모달 열기 함수
                 function openModal($modal) {
                     $modal.addClass('show');
                     $('body').css('overflow', 'hidden');
                 }
-
-                // 모달 닫기 함수
                 function closeModal($modal) {
                     $modal.removeClass('show');
                     $('body').css('overflow', '');
                 }
-
-                // 닫기 버튼 클릭 이벤트
                 $('.close-modal, .btn-close-modal').on('click', function() {
                     var $modal = $(this).closest('.popup-modal');
                     closeModal($modal);
                 });
-
-                // 모달 배경 클릭 이벤트 (모달 외부 클릭 시 닫기)
                 $('.popup-modal').on('click', function(e) {
                     if ($(e.target).is(this)) {
                         closeModal($(this));
                     }
                 });
-
-                // ESC 키로 모달 닫기
                 $(document).on('keydown', function(e) {
                     if (e.keyCode === 27) { // ESC 키
                         var $openModal = $('.popup-modal.show');
@@ -1701,11 +1702,6 @@
                         }
                     }
                 });
-
-                // 모달 내 링크 클릭 시 새 탭에서 열기 (이미 target="_blank" 설정되어 있음)
-                // 추가 처리 불필요
-
-                // 모달 스크롤 시 body 스크롤 방지
                 $('.popup-modal .modal-body').on('wheel', function(e) {
                     var $scrollable = $(this);
                     var scrollTop = $scrollable.scrollTop();
@@ -1718,8 +1714,20 @@
                     }
                 });
             });
+            $(function() {
+                const $forumPopup = $('#popup-notice-forum');                
+                const expireDate = new Date('2026-10-02T00:00:00');
+                const now = new Date();
 
-            // 모달 외부 클릭 시 닫기 (터치 환경 대응)
+                if ($forumPopup.length && now < expireDate) {
+                    $forumPopup.addClass('show');
+                    $('body').css('overflow', 'hidden');
+                }
+                $forumPopup.find('.btn-close-notice').on('click', function() {
+                    $forumPopup.removeClass('show');
+                    $('body').css('overflow', '');
+                });
+            });
             document.addEventListener('click', function(e) {
                 var modals = document.querySelectorAll('.popup-modal.show');
                 modals.forEach(function(modal) {

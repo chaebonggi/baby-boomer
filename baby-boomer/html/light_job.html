@@ -879,8 +879,8 @@
             .popup-modal { display:none; position:fixed; top:0; right:0; bottom:0; left:0; z-index:-1; visibility:hidden; width:100%; height:100%; opacity:0; background-color:rgba(0,0,0,0.6); transition:opacity 0.3s ease, visibility 0.3s ease; }
             .popup-modal.show { display:block; z-index:2000; opacity:1; visibility:visible; }
             .popup-modal .modal-dialog { display:flex; align-items:center; justify-content:center; position:fixed; top:0; left:0; width:100%; height:100%; z-index:2001; padding:1.6rem; box-sizing:border-box; }
-            .notice-img-modal { display:flex; flex-direction:column; width:100%; max-width:480px; max-height:90vh; border-radius:1.6rem; overflow:hidden; box-shadow:0 1rem 3rem rgba(0,0,0,0.35); background-color:#ffffff; }
-            .notice-img-wrap { flex:1 1 auto; width:100%; overflow-y:auto; -webkit-overflow-scrolling:touch; background-color:#ffffff; line-height:0; }
+            .notice-img-modal { display:flex; flex-direction:column; width:100%; max-width:540px; max-height:90vh; border-radius:1.6rem; overflow:hidden; box-shadow:0 1rem 3rem rgba(0,0,0,0.35); background-color:transparent; }
+            .notice-img-wrap { flex:1 1 auto; width:100%; overflow-y:auto; -webkit-overflow-scrolling:touch; background-color:transparent; line-height:0; }
             .notice-img-wrap img { width:100%; height:auto; display:block; }
             .notice-footer { flex-shrink:0; display:flex; justify-content:center; align-items:center; padding:1.2rem 2rem; background-color:#111e38; }
             .btn-close-notice { min-width:12rem; padding:0.8rem 2.4rem; background-color:#24355a; color:#ffffff; font-size:1.4rem; font-weight:500; border-radius:0.6rem; transition:background-color 0.2s; cursor:pointer; text-align:center; border:none; }
@@ -897,7 +897,7 @@
                 <div class="modal-content notice-img-modal">
                     <!-- 이미지 영역 -->
                     <div class="notice-img-wrap">
-                        <img src="../images/main/pop_poster.jpg" alt="지속 가능한 내일, 같이 만드는 일자리">
+                        <img src="../images/main/pop_img.png" alt="지속 가능한 내일, 같이 만드는 일자리">
                     </div>
                     
                     <!-- 팝업 컨트롤 푸터 -->
@@ -912,28 +912,24 @@
     <script>
         $(document).ready(function() {
             const $popup = $('#popup-notice-lightjob');
-            const expireDate = new Date('2026-10-02T00:00:00');
-            const now = new Date();
-            if (now < expireDate) {
-                $popup.addClass('show');
-                $('body').css('overflow', 'hidden');
+            $popup.addClass('show');
+            $('body').css('overflow', 'hidden');
 
-                function closeNoticePopup() {
-                    $popup.removeClass('show');
-                    $('body').css('overflow', '');
-                }
-                $popup.find('.btn-close-notice').on('click', closeNoticePopup);
-                $popup.on('click', function(e) {
-                    if ($(e.target).is(this)) {
-                        closeNoticePopup();
-                    }
-                });
-                $(document).on('keydown', function(e) {
-                    if (e.keyCode === 27 && $popup.hasClass('show')) {
-                        closeNoticePopup();
-                    }
-                });
+            function closeNoticePopup() {
+                $popup.removeClass('show');
+                $('body').css('overflow', '');
             }
+            $popup.find('.btn-close-notice').on('click', closeNoticePopup);
+            $popup.on('click', function(e) {
+                if ($(e.target).is(this)) {
+                    closeNoticePopup();
+                }
+            });
+            $(document).on('keydown', function(e) {
+                if (e.keyCode === 27 && $popup.hasClass('show')) {
+                    closeNoticePopup();
+                }
+            });
         });
     </script>
 </body>
