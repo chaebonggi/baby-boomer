@@ -618,6 +618,7 @@ html, body {
   font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: 0.05rem;
+  word-break: break-all;
 }
 .accordion-container .accordion-info-wrap .info-cont .info-txt span {
   font-weight: 500;
